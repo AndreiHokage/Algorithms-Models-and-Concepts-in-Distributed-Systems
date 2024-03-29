@@ -36,9 +36,7 @@ public class ProcessServicesRPC {
     public void registrateToTheHUB(){
         initializeConnection();
         networking.Message requestRegistrationMessage = ProtoUtils.createProcRegistrationRequest(processNode);
-        //sendRequest(ProtoUtils.createSizeMessageRequest(requestRegistrationMessage));
         sendRequest(requestRegistrationMessage);
-        // sendRequest(ProtoUtils.createProcRegistrationRequest(processNode));
         //networking.Message response = readResponse();
         //System.out.println("Receive response ... \n" + response);
     }
@@ -73,20 +71,19 @@ public class ProcessServicesRPC {
             System.out.println("Sending request ... \n" + request);
             System.out.println("MESSAGE SIZE: " + Integer.valueOf(request.getSerializedSize()).toString());
 
-            byte[] sizeBytes = ByteBuffer.allocate(4).putInt(request.getSerializedSize()).array();
-            byte[] messageBytes = request.toByteArray();
+            byte[] sizeMessageToBytes = ByteBuffer.allocate(4).putInt(request.getSerializedSize()).array();
+            byte[] contentMessageToBytes = request.toByteArray();
 
-            byte[] combined = new byte[sizeBytes.length + messageBytes.length];
+            byte[] requestToBytes = new byte[sizeMessageToBytes.length + contentMessageToBytes.length];
 
-            ByteBuffer buffer = ByteBuffer.wrap(combined);
-            buffer.put(sizeBytes);
-            buffer.put(messageBytes);
+            ByteBuffer buffer = ByteBuffer.wrap(requestToBytes);
+            buffer.put(sizeMessageToBytes);
+            buffer.put(contentMessageToBytes);
+            requestToBytes = buffer.array();
 
-            combined = buffer.array();
-
-            //request.writeDelimitedTo(output);
-            output.write(combined);
+            output.write(requestToBytes);
             output.flush();
+
             System.out.println("Request sent.");
         } catch (IOException e) {
             e.printStackTrace();
