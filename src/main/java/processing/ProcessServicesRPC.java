@@ -11,7 +11,11 @@ import java.util.concurrent.LinkedBlockingDeque;
 import model.Hub;
 import model.ProcessNode;
 
+import java.util.logging.*;
+
 public class ProcessServicesRPC {
+
+    private static final Logger logger = Logger.getLogger(ProcessServicesRPC.class.getName());
 
     private ProcessNode processNode;
 
@@ -22,6 +26,14 @@ public class ProcessServicesRPC {
     private OutputStream output;
 
     private Socket connection;
+
+    private Socket outputConnection;
+
+    private OutputStream outputStreamConnection;
+
+    private Socket inputConnection;
+
+    private InputStream inputStreamConnection;
 
     private BlockingQueue<networking.Message> qResponses;
 
@@ -34,9 +46,8 @@ public class ProcessServicesRPC {
     }
 
     public void registrateToTheHUB(){
-        initializeConnection();
-        networking.Message requestRegistrationMessage = ProtoUtils.createProcRegistrationRequest(processNode);
-        sendRequest(requestRegistrationMessage);
+        //networking.Message requestRegistrationMessage = ProtoSerialiseUtils.createProcRegistrationRequest(processNode);
+        //sendRequest(requestRegistrationMessage);
         //networking.Message response = readResponse();
         //System.out.println("Receive response ... \n" + response);
     }
@@ -66,10 +77,39 @@ public class ProcessServicesRPC {
         return response;
     }
 
+    private OutputStream createOutputConnection(){
+        try {
+            outputConnection = new Socket(hub.getHost(), hub.getPort().intValue());
+            outputStreamConnection = outputConnection.getOutputStream();
+            outputStreamConnection.flush();
+
+            return outputStreamConnection;
+        } catch (Exception ex){
+            logger.log (Level.SEVERE,"Error in creating output socket connection: " + ex.getMessage());
+            return null;
+        }
+    }
+
+    private void closeOutputConnection(){
+        try{
+            outputStreamConnection.close();
+            outputConnection.close();
+            logger.info("OutputStream connection has been closed!");
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "Error in closing the outputStream connection: " + e.getMessage() );
+        }
+    }
+
     private void sendRequest(networking.Message request){
         try{
-            System.out.println("Sending request ... \n" + request);
-            System.out.println("MESSAGE SIZE: " + Integer.valueOf(request.getSerializedSize()).toString());
+            OutputStream outputStreamConnection = createOutputConnection();
+
+            if(outputStreamConnection == null){
+                return;
+            }
+
+            logger.info("Sending request ... \n" + request);
+            logger.info("Size of the sending message: " + Integer.valueOf(request.getSerializedSize()).toString());
 
             byte[] sizeMessageToBytes = ByteBuffer.allocate(4).putInt(request.getSerializedSize()).array();
             byte[] contentMessageToBytes = request.toByteArray();
@@ -81,13 +121,38 @@ public class ProcessServicesRPC {
             buffer.put(contentMessageToBytes);
             requestToBytes = buffer.array();
 
-            output.write(requestToBytes);
-            output.flush();
+            outputStreamConnection.write(requestToBytes);
+            outputStreamConnection.flush();
 
-            System.out.println("Request sent.");
+            logger.info("Request has been sent!");
+            closeOutputConnection();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Error in sending the message through socket stream: " + e.getMessage());
         }
+    }
+
+    private InputStream createInputConnection(){
+        try{
+            inputConnection = new Socket(hub.getHost(), hub.getPort().intValue());
+            inputStreamConnection = inputConnection.getInputStream();
+
+            return inputStreamConnection;
+        } catch (Exception ex) {
+            logger.log (Level.SEVERE,"Error in creating output socket connection: " + ex.getMessage());
+            return null;
+        }
+    }
+
+    private networking.Message receiveReply(){
+        InputStream inputStreamConnection = createInputConnection();
+
+        if(inputStreamConnection == null){
+            return null;
+        }
+
+        logger.info("Reading reply... ");
+
+        return null;
     }
 
     private void startReader(){

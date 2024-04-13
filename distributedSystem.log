@@ -1,0 +1,4812 @@
+2024-04-13 11:19:50 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 11:19:50 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 11:19:50 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 11:19:50 TRACE PLAbstraction:61 - Send message type: PROC_REGISTRATION
+messageUuid: "bbca64c8-6ee5-4e4c-bfa6-6a7fb6083935"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 11:19:50 ERROR SystemOutputServer:34 - Error in creating output socket connection: Connection refused: connect
+  2024-04-13 11:20:02 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 11:20:02 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 11:20:02 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 11:20:02 TRACE PLAbstraction:61 - Send message type: PROC_REGISTRATION
+messageUuid: "729dc770-4c78-438c-beb1-caad2ed14dc2"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 11:20:02 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "bc6845f1-dac5-45f5-98a5-a7b258c31472"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 5000
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "729dc770-4c78-438c-beb1-caad2ed14dc2"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 11:20:02 INFO  SystemOutputServer:58 - Size of the sending message: 120
+  2024-04-13 11:20:02 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 11:20:02 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 11:21:14 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 11:21:14 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 11:21:14 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 11:21:14 TRACE PLAbstraction:61 - Send message type: PROC_REGISTRATION
+messageUuid: "4e62d00f-fb59-45c8-a8cd-bd25c604799e"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 11:21:14 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "c5dd6e5e-53f1-488c-a87c-7f39af53d25c"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 5000
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "4e62d00f-fb59-45c8-a8cd-bd25c604799e"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 11:21:14 INFO  SystemOutputServer:58 - Size of the sending message: 120
+  2024-04-13 11:21:14 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 11:21:14 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 12:00:34 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 12:00:34 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 12:00:34 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:00:34 TRACE PLAbstraction:68 - Send message type: PROC_REGISTRATION
+messageUuid: "a9943ba2-3e8e-4118-817d-56310aacdadb"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 12:00:34 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "a9943ba2-3e8e-4118-817d-56310aacdadb"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "a9943ba2-3e8e-4118-817d-56310aacdadb"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 12:00:34 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 12:00:34 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 12:00:34 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 12:00:34 TRACE PLAbstraction:44 - Deliver the message: type: PROC_REGISTRATION
+messageUuid: "a9943ba2-3e8e-4118-817d-56310aacdadb"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ sent by ProcessNode{host='127.0.0.1', port=4001, owner='null', index=null, rank=null} to the abstraction null
+  2024-04-13 12:02:11 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 12:02:12 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 12:02:12 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:02:12 TRACE PLAbstraction:67 - Send message type: PROC_REGISTRATION
+messageUuid: "adebca6f-368f-420b-86a4-a3344d410814"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 12:02:12 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "adebca6f-368f-420b-86a4-a3344d410814"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "adebca6f-368f-420b-86a4-a3344d410814"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 12:02:12 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 12:02:12 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 12:02:12 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 12:02:24 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 12:02:24 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:02:24 TRACE PLAbstraction:44 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "1840b13c-5445-4f2e-b3cd-b7136f34def5"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5000, owner='null', index=null, rank=null} to the abstraction null
+  2024-04-13 12:09:57 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 12:09:57 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 12:09:57 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:09:57 TRACE PLAbstraction:67 - Send message type: PROC_REGISTRATION
+messageUuid: "cb7b1754-8cb8-4692-bbc9-98694091ac6a"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 12:09:57 ERROR SystemOutputServer:34 - Error in creating output socket connection: Connection refused: connect
+  2024-04-13 12:10:06 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 12:10:06 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 12:10:06 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:10:06 TRACE PLAbstraction:67 - Send message type: PROC_REGISTRATION
+messageUuid: "99a6dbae-5a40-4a26-b364-7fbe7807a8cc"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 12:10:06 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "99a6dbae-5a40-4a26-b364-7fbe7807a8cc"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "99a6dbae-5a40-4a26-b364-7fbe7807a8cc"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 12:10:06 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 12:10:06 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 12:10:06 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 12:10:15 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 12:10:15 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:10:15 TRACE PLAbstraction:44 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "473aba93-64db-406e-b818-dd8d8d52969a"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: senderHost: "127.0.0.1"
+senderListeningPort: 5000
+message {
+  type: PROC_INITIALIZE_SYSTEM
+  messageUuid: "473aba93-64db-406e-b818-dd8d8d52969a"
+  systemId: "sys-1"
+  procInitializeSystem {
+    processes {
+      host: "127.0.0.1"
+      port: 4001
+      owner: "abc"
+      index: 1
+      rank: 1
+    }
+    processes {
+      host: "127.0.0.1"
+      port: 5001
+      owner: "ref"
+      index: 1
+      rank: 2
+    }
+    processes {
+      host: "127.0.0.1"
+      port: 5002
+      owner: "ref"
+      index: 2
+      rank: 3
+    }
+    processes {
+      host: "127.0.0.1"
+      port: 5003
+      owner: "ref"
+      index: 3
+      rank: 4
+    }
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5000, owner='null', index=null, rank=null} to the abstraction null
+  2024-04-13 12:11:01 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 12:11:02 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 12:11:02 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:11:02 TRACE PLAbstraction:67 - Send message type: PROC_REGISTRATION
+messageUuid: "a98188b4-613d-4430-ac15-5e9dd8c4db21"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 12:11:02 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "a98188b4-613d-4430-ac15-5e9dd8c4db21"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "a98188b4-613d-4430-ac15-5e9dd8c4db21"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 12:11:02 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 12:11:02 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 12:11:02 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 12:11:11 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 12:11:11 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:11:11 TRACE PLAbstraction:44 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "70a05202-ca32-4e2a-abd0-f4cc7024e885"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='null', index=null, rank=null} to the abstraction null
+  2024-04-13 12:26:43 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 12:26:43 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 12:26:43 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:26:43 TRACE PLAbstraction:72 - Send message type: PROC_REGISTRATION
+messageUuid: "0ac60ff3-a2ad-4c31-b049-c112ede7c831"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 12:26:43 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "0ac60ff3-a2ad-4c31-b049-c112ede7c831"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "0ac60ff3-a2ad-4c31-b049-c112ede7c831"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 12:26:43 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 12:26:43 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 12:26:43 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 12:26:50 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 12:26:50 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 12:26:50 TRACE PLAbstraction:49 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "fe3e58c1-1e81-446c-a352-7b73d72ada32"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='app.pl', toAbstractionId='null', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='null', index=null, rank=null} to the abstraction app
+  2024-04-13 13:14:41 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:14:41 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:14:41 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:14:41 TRACE PLAbstraction:72 - Send message type: PROC_REGISTRATION
+messageUuid: "9dd4feec-35ae-4ef6-9190-f1e7d1074bde"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:14:41 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "9dd4feec-35ae-4ef6-9190-f1e7d1074bde"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "9dd4feec-35ae-4ef6-9190-f1e7d1074bde"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:14:41 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:14:41 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:14:41 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:14:48 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:14:48 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:14:48 TRACE PLAbstraction:49 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "d88f0b5c-cfe0-4ecc-a713-a39e8fb8742b"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='app.pl', toAbstractionId='null', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:15:27 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:15:27 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:15:27 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:15:27 TRACE PLAbstraction:72 - Send message type: PROC_REGISTRATION
+messageUuid: "279eb24f-d8b1-43fe-bf65-8a31213a7e1d"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:15:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "279eb24f-d8b1-43fe-bf65-8a31213a7e1d"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "279eb24f-d8b1-43fe-bf65-8a31213a7e1d"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:15:27 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:15:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:15:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:15:39 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:15:39 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:15:54 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:15:54 TRACE PLAbstraction:72 - Send message type: PROC_REGISTRATION
+messageUuid: "2a5f289c-48b9-4d2f-8f83-87438bfcd1c8"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:15:54 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "2a5f289c-48b9-4d2f-8f83-87438bfcd1c8"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "2a5f289c-48b9-4d2f-8f83-87438bfcd1c8"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:15:55 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:15:55 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:15:55 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:16:01 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:16:01 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:17:30 TRACE PLAbstraction:49 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "b6ce5e29-f8b3-4576-a743-ce60707aca5d"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='app.pl', toAbstractionId='null', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:18:48 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:18:48 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:18:53 TRACE PLAbstraction:73 - Send message type: PROC_REGISTRATION
+messageUuid: "23d0d00d-b837-48bd-9271-38e55911870d"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:18:53 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:18:53 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "23d0d00d-b837-48bd-9271-38e55911870d"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "23d0d00d-b837-48bd-9271-38e55911870d"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:18:53 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:18:53 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:18:53 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:18:57 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:18:57 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:19:11 TRACE PLAbstraction:50 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "f637410e-1b9f-4345-bf9b-3707d187e3ba"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='app', toAbstractionId='null', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:20:33 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:20:33 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:20:39 TRACE PLAbstraction:73 - Send message type: PROC_REGISTRATION
+messageUuid: "d5a7808a-787b-43c3-83ee-4a853ddf60ba"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:20:39 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:20:39 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "d5a7808a-787b-43c3-83ee-4a853ddf60ba"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "d5a7808a-787b-43c3-83ee-4a853ddf60ba"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:20:39 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:20:39 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:20:39 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:20:44 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:20:44 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:20:46 TRACE PLAbstraction:50 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "fe4ebbae-c77c-43d0-9ed6-0467675e6c6d"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='app', toAbstractionId='null', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:21:55 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:21:55 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:21:56 TRACE PLAbstraction:73 - Send message type: PROC_REGISTRATION
+messageUuid: "5ece9117-79af-40e6-9dc1-96862e36649e"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:21:56 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:21:56 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "5ece9117-79af-40e6-9dc1-96862e36649e"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "5ece9117-79af-40e6-9dc1-96862e36649e"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:21:56 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:21:56 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:21:56 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:22:01 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:22:01 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:22:06 TRACE PLAbstraction:50 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "d9414198-6f5a-4a70-869e-3b59cc9847d3"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='app', toAbstractionId='null', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:24:50 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:24:51 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:24:52 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "47361b87-62c5-4180-aad0-5ab76e2386c7"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:24:52 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:24:52 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "47361b87-62c5-4180-aad0-5ab76e2386c7"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "47361b87-62c5-4180-aad0-5ab76e2386c7"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:24:52 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:24:52 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:24:52 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:24:56 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:24:56 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:25:01 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "16b998d0-5889-44f2-ab98-0d31de5843f5"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:25:09 INFO  DistributedSystem:91 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 13:25:09 INFO  DistributedSystem:97 - The list of processes received is: 
+  2024-04-13 13:25:09 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 13:25:09 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 13:25:09 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 13:25:09 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 13:25:09 INFO  DistributedSystem:101 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 13:27:56 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:27:56 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:27:58 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "bda2da1b-3612-4d08-9acb-f480596acf35"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:27:58 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:27:58 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "bda2da1b-3612-4d08-9acb-f480596acf35"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "bda2da1b-3612-4d08-9acb-f480596acf35"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:27:58 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:27:58 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:27:58 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:28:04 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:28:04 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:28:39 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "66b3774d-9e6f-4fca-b832-6cdfe0b97c18"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:30:38 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:30:38 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:30:48 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "ea983d9b-d9fd-4297-8fea-dbfeff635012"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:30:48 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:30:48 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "ea983d9b-d9fd-4297-8fea-dbfeff635012"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "ea983d9b-d9fd-4297-8fea-dbfeff635012"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:30:48 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:30:48 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:30:48 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:30:59 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:30:59 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:31:02 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "077e6350-f70b-4da4-8f92-0517b5bb1721"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:31:50 INFO  DistributedSystem:91 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 13:31:50 INFO  DistributedSystem:97 - The list of processes received is: 
+  2024-04-13 13:31:50 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 13:31:50 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 13:31:50 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 13:31:50 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 13:31:50 INFO  DistributedSystem:101 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 13:31:50 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 13:32:06 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:32:06 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:32:06 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:32:07 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "901cf95d-71c1-4704-b3d5-35d268b9320e"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:32:07 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "901cf95d-71c1-4704-b3d5-35d268b9320e"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "901cf95d-71c1-4704-b3d5-35d268b9320e"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:32:07 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:32:07 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:32:07 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:32:14 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:32:14 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:32:14 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "d01de492-16cc-4f8c-b1c6-5a1e68cf195d"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:32:14 INFO  DistributedSystem:91 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 13:32:14 INFO  DistributedSystem:97 - The list of processes received is: 
+  2024-04-13 13:32:14 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 13:32:14 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 13:32:14 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 13:32:14 INFO  DistributedSystem:99 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 13:32:14 INFO  DistributedSystem:101 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 13:32:14 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 13:32:46 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:32:46 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:34:28 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:34:28 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:34:28 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:34:28 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "6eb25ab4-8ebe-46d8-bdc7-21bd32447270"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:34:28 ERROR SystemOutputServer:34 - Error in creating output socket connection: Connection refused: connect
+  2024-04-13 13:34:38 TRACE DistributedSystem:55 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:34:38 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:34:38 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:34:38 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "66aea106-a354-41ae-b883-4add2473b959"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:34:38 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "66aea106-a354-41ae-b883-4add2473b959"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "66aea106-a354-41ae-b883-4add2473b959"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:34:38 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:34:38 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:34:38 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:34:45 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:34:45 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:34:45 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "6cc944b7-a960-44aa-b876-86910b6dcb20"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:34:45 INFO  DistributedSystem:91 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 13:35:10 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:35:10 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:35:11 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:35:11 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "87ae05cb-9d7d-4c4d-8e3c-067f89dbf016"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:35:11 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "87ae05cb-9d7d-4c4d-8e3c-067f89dbf016"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "87ae05cb-9d7d-4c4d-8e3c-067f89dbf016"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:35:11 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:35:11 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:35:11 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:35:15 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:35:15 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:35:15 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "9f4ef459-81df-46fd-99ac-828fde70f7df"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:35:15 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 13:35:15 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 13:35:15 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 13:35:15 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 13:35:15 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 13:35:15 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 13:35:15 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 13:35:15 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 13:35:27 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:35:27 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:35:27 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 83
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='5997620f-7336-4824-86e7-9b4f565c0928', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2} to the abstraction app.beb
+  2024-04-13 13:52:14 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:52:14 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:52:14 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:52:14 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "6bd809fe-b325-46fc-9ccd-85d87a0cec2d"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:52:14 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "6bd809fe-b325-46fc-9ccd-85d87a0cec2d"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "6bd809fe-b325-46fc-9ccd-85d87a0cec2d"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:52:14 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:52:14 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:52:14 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:52:22 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:52:22 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:52:22 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "265283b4-f34a-4702-bbfd-9500fe4e721c"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:52:22 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 13:52:22 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 13:52:22 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 13:52:22 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 13:52:22 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 13:52:22 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 13:52:22 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 13:52:22 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 13:52:32 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:52:32 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:52:32 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 83
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='9f78ce93-a41e-4252-8e2a-9c0227f81422', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2} to the abstraction app.beb
+  2024-04-13 13:54:14 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:54:14 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:54:18 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "51ece7bf-a0c8-43b8-8033-ea5e4d98e068"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:54:18 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:54:18 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "51ece7bf-a0c8-43b8-8033-ea5e4d98e068"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "51ece7bf-a0c8-43b8-8033-ea5e4d98e068"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:54:18 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:54:18 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:54:18 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:54:23 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:54:23 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:54:26 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "918a1582-374f-4bb1-a6a3-511b3eae75c4"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:54:26 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 13:54:26 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 13:54:26 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 13:54:26 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 13:54:26 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 13:54:26 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 13:54:26 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 13:54:26 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 13:54:36 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:54:36 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:55:27 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 83
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='0bacb42d-06cb-4f49-b5b3-3814dab99594', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2} to the abstraction app.beb
+  2024-04-13 13:56:13 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 83
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2} to the abstraction app
+  2024-04-13 13:57:58 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 13:57:58 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 13:57:58 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:57:58 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "902349fa-426f-450e-af5d-6f15ddbaeb45"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:57:58 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "902349fa-426f-450e-af5d-6f15ddbaeb45"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "902349fa-426f-450e-af5d-6f15ddbaeb45"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 13:57:58 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 13:57:58 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:57:58 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 13:58:02 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:58:02 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:58:02 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "654b2b6d-159e-42b0-915d-b08828bbf9fa"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 13:58:02 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 13:58:02 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 13:58:02 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 13:58:02 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 13:58:02 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 13:58:02 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 13:58:02 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 13:58:02 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 13:58:16 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 13:58:16 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 13:58:16 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 83
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='8c520960-e3e5-469d-8a2c-83541895432b', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2} to the abstraction app.beb
+  2024-04-13 13:58:16 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 83
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2} to the abstraction app
+  2024-04-13 13:58:16 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "386d7fd9-a482-44a1-91d7-2d0be359eb96"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 83
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 13:58:16 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "386d7fd9-a482-44a1-91d7-2d0be359eb96"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "386d7fd9-a482-44a1-91d7-2d0be359eb96"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 83
+      }
+    }
+  }
+}
+
+  2024-04-13 13:58:16 INFO  SystemOutputServer:58 - Size of the sending message: 131
+  2024-04-13 13:58:16 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 13:58:16 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:09:34 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:09:34 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:09:34 TRACE PLAbstraction:46 - Deliver the message: type: APP_BROADCAST
+messageUuid: "4463bd15-f523-442f-826f-298c7529cb6d"
+FromAbstractionId: "hub"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appBroadcast {
+  value {
+    defined: true
+    v: 85
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:10:36 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 14:10:36 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 14:10:36 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:10:36 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "720fdcbf-d528-445e-97d3-68157a2a112e"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:10:36 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "720fdcbf-d528-445e-97d3-68157a2a112e"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "720fdcbf-d528-445e-97d3-68157a2a112e"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 14:10:36 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:10:36 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:10:36 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:10:51 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 14:10:51 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 14:10:55 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "abf09fdd-8159-477f-9fcd-7401b90f1349"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:10:55 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:10:55 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "abf09fdd-8159-477f-9fcd-7401b90f1349"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "abf09fdd-8159-477f-9fcd-7401b90f1349"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 14:10:55 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:10:55 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:10:55 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:11:00 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:11:00 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:11:04 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "480de1dc-d58f-401a-afa7-d57489caeeea"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:11:04 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 14:11:04 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 14:11:04 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 14:11:04 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 14:11:04 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 14:11:04 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 14:11:04 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 14:11:04 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 14:11:15 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:11:15 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:11:47 TRACE PLAbstraction:46 - Deliver the message: type: APP_BROADCAST
+messageUuid: "e4652334-e742-486c-a5ed-ee9715c52926"
+FromAbstractionId: "hub"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appBroadcast {
+  value {
+    defined: true
+    v: 65
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:15:49 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 14:15:49 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 14:15:49 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:15:49 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "8e550291-8d8a-412a-85ac-6d7a1a431860"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:15:49 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "8e550291-8d8a-412a-85ac-6d7a1a431860"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "8e550291-8d8a-412a-85ac-6d7a1a431860"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 14:15:49 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:15:49 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:15:49 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:15:53 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:15:53 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:15:53 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "0f849edd-5f33-4acf-ae01-7595eb9c5d20"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:15:53 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 14:15:53 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 14:15:53 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 14:15:53 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 14:15:53 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 14:15:53 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 14:15:53 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 14:15:53 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 14:16:01 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:16:01 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:16:01 TRACE PLAbstraction:46 - Deliver the message: type: APP_BROADCAST
+messageUuid: "31be51e1-d322-421e-83b7-3719fb699c17"
+FromAbstractionId: "hub"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appBroadcast {
+  value {
+    defined: true
+    v: 67
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:16:25 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 14:16:25 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 14:16:26 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "0bd122b3-6591-4107-95d1-4316d2f20818"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:16:26 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:16:26 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "0bd122b3-6591-4107-95d1-4316d2f20818"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "0bd122b3-6591-4107-95d1-4316d2f20818"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 14:16:26 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:16:26 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:16:26 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:16:33 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:16:33 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:16:35 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "2e6719b0-c976-4466-ae4a-e27ab34f01ab"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:16:36 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 14:16:36 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 14:16:36 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 14:16:36 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 14:16:36 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 14:16:36 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 14:16:36 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 14:16:36 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 14:16:48 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:16:48 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:16:50 TRACE PLAbstraction:46 - Deliver the message: type: APP_BROADCAST
+messageUuid: "3429a0e3-a479-4588-8152-1ce1853727b9"
+FromAbstractionId: "hub"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appBroadcast {
+  value {
+    defined: true
+    v: 45
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:19:52 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 14:19:53 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 14:19:53 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:19:53 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "193a1870-750c-4bd7-876a-34713eb271a1"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:19:53 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "193a1870-750c-4bd7-876a-34713eb271a1"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "193a1870-750c-4bd7-876a-34713eb271a1"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 14:19:53 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:19:53 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:19:53 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:19:59 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:19:59 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:19:59 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "efa97d80-6188-468b-b44b-3f13f0b3ae4f"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:19:59 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 14:19:59 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 14:19:59 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 14:19:59 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 14:19:59 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 14:19:59 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 14:19:59 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 14:19:59 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 14:20:06 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:20:06 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:20:06 TRACE PLAbstraction:46 - Deliver the message: type: APP_BROADCAST
+messageUuid: "d13bef99-a334-4958-8541-10ad7a4372e8"
+FromAbstractionId: "hub"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appBroadcast {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:20:06 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:20:06 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:20:06 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:20:06 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "7cc0ab79-f74c-4f30-a74b-ea44e7e93cdf"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 56
+      }
+    }
+  }
+}
+
+  2024-04-13 14:20:06 INFO  SystemOutputServer:58 - Size of the sending message: 135
+  2024-04-13 14:20:06 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:20:06 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:20:06 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:20:06 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "241aa982-616b-4f5d-a3d5-52b1050f4d90"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 56
+      }
+    }
+  }
+}
+
+  2024-04-13 14:20:06 INFO  SystemOutputServer:58 - Size of the sending message: 135
+  2024-04-13 14:20:06 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:20:06 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:20:06 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:20:06 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "0021469b-eab6-4e6c-8158-869fb59a0010"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 56
+      }
+    }
+  }
+}
+
+  2024-04-13 14:20:06 INFO  SystemOutputServer:58 - Size of the sending message: 135
+  2024-04-13 14:20:06 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:20:06 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:20:06 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:20:06 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "648b2595-0bdd-4c7e-b816-e19126cbf728"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 56
+      }
+    }
+  }
+}
+
+  2024-04-13 14:20:06 INFO  SystemOutputServer:58 - Size of the sending message: 135
+  2024-04-13 14:20:06 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:20:06 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:20:06 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='7cc0ab79-f74c-4f30-a74b-ea44e7e93cdf', fromAbstractionId='', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} to the abstraction app.beb
+  2024-04-13 14:20:06 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+messageUuid: "1f87a5b5-f025-412f-b92c-0d0cf6bd576c"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} to the abstraction app
+  2024-04-13 14:20:06 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "00921868-5f0c-4f8b-858c-01e9b3a4c140"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:20:06 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "00921868-5f0c-4f8b-858c-01e9b3a4c140"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "00921868-5f0c-4f8b-858c-01e9b3a4c140"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 56
+      }
+    }
+  }
+}
+
+  2024-04-13 14:20:06 INFO  SystemOutputServer:58 - Size of the sending message: 131
+  2024-04-13 14:20:06 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:20:06 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:20:15 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:20:15 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:20:15 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='0cad3220-042c-4fe2-8c51-31b593f0daad', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2} to the abstraction app.beb
+  2024-04-13 14:20:15 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2} to the abstraction app
+  2024-04-13 14:20:15 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "76d174be-d528-4f82-95a9-e1a79be8a2fd"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 56
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:20:15 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "76d174be-d528-4f82-95a9-e1a79be8a2fd"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "76d174be-d528-4f82-95a9-e1a79be8a2fd"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 56
+      }
+    }
+  }
+}
+
+  2024-04-13 14:20:15 INFO  SystemOutputServer:58 - Size of the sending message: 131
+  2024-04-13 14:20:15 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:20:15 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:20:28 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 14:20:28 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 14:20:28 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:20:28 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "ad71ccb3-8fc1-4827-ab07-8b9c677ca5ad"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:20:28 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "ad71ccb3-8fc1-4827-ab07-8b9c677ca5ad"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "ad71ccb3-8fc1-4827-ab07-8b9c677ca5ad"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 14:20:28 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:20:28 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:20:28 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:20:39 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 14:20:39 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 14:20:39 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:20:40 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "f141aade-9a1b-43d9-bae6-78eabfe67058"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 2
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:20:40 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "f141aade-9a1b-43d9-bae6-78eabfe67058"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "f141aade-9a1b-43d9-bae6-78eabfe67058"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 2
+    }
+  }
+}
+
+  2024-04-13 14:20:40 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:20:40 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:20:40 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:20:50 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 14:20:50 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 14:20:50 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:20:50 TRACE PLAbstraction:71 - Send message type: PROC_REGISTRATION
+messageUuid: "f1747ec5-bf54-456f-8bfc-fd11d23294db"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 3
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:20:50 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "f1747ec5-bf54-456f-8bfc-fd11d23294db"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "f1747ec5-bf54-456f-8bfc-fd11d23294db"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 3
+    }
+  }
+}
+
+  2024-04-13 14:20:50 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:20:50 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:20:50 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:20:58 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:20:58 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:20:58 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:20:58 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:20:58 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:20:58 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:20:58 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "2f0ffabc-d134-4eaa-9b75-5987eb8042d5"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4002
+    owner: "abc"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 4
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 5
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 6
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=2, rank=-1} to the abstraction app
+  2024-04-13 14:20:58 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "ac1ecf3f-c805-4e64-b6d1-5168b452ecb9"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4002
+    owner: "abc"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 4
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 5
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 6
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 14:20:58 TRACE PLAbstraction:46 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "9739feb9-90eb-43c8-94ac-d5eb84fc96fb"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4002
+    owner: "abc"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 4
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 5
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 6
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=3, rank=-1} to the abstraction app
+  2024-04-13 14:20:58 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3} and initialise the rank with 3
+  2024-04-13 14:20:58 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 14:20:58 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 14:20:58 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=6}
+  2024-04-13 14:20:58 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4}
+  2024-04-13 14:20:58 INFO  AppAbstraction:68 - abc-2: Starting system sys-1
+  2024-04-13 14:20:58 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5} and initialise the rank with 5
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5}
+  2024-04-13 14:20:58 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=6}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 14:20:58 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 14:20:58 INFO  AppAbstraction:68 - abc-1: Starting system sys-1
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5}
+  2024-04-13 14:20:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=6}
+  2024-04-13 14:20:58 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 14:20:58 INFO  AppAbstraction:68 - abc-3: Starting system sys-1
+  2024-04-13 14:21:12 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:21:12 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:21:12 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:21:12 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:21:12 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:21:12 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 678
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='03003fd7-730b-4ddd-ad6f-9754df0aa2d7', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app.beb
+  2024-04-13 14:21:12 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:21:12 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 678
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app
+  2024-04-13 14:21:12 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 678
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='bdd4a35e-2846-4ca2-84f2-a44820122cee', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app.beb
+  2024-04-13 14:21:12 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "2a1b5c0c-3535-4631-a6ed-a5f69ed56ac9"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 678
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:21:12 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 678
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app
+  2024-04-13 14:21:12 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 678
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='9e7675ce-1b38-436a-9b39-a984a6af7685', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app.beb
+  2024-04-13 14:21:12 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "2a1b5c0c-3535-4631-a6ed-a5f69ed56ac9"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "2a1b5c0c-3535-4631-a6ed-a5f69ed56ac9"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 678
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:12 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "d5253817-3c14-448f-9467-2b7558712ca1"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 678
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:21:12 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:21:12 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 678
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app
+  2024-04-13 14:21:12 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:12 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:12 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "d5253817-3c14-448f-9467-2b7558712ca1"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "d5253817-3c14-448f-9467-2b7558712ca1"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 678
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:12 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:21:12 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:12 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:12 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "0e11fa51-864e-4f71-bcea-8fe89389041b"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 678
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:21:12 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "0e11fa51-864e-4f71-bcea-8fe89389041b"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "0e11fa51-864e-4f71-bcea-8fe89389041b"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 678
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:12 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 14:21:12 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:12 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:27 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:21:27 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:21:27 TRACE PLAbstraction:46 - Deliver the message: type: APP_BROADCAST
+messageUuid: "c2ed4db2-04d9-4918-8b3b-014d7546c60f"
+FromAbstractionId: "hub"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appBroadcast {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=3, rank=-1} to the abstraction app
+  2024-04-13 14:21:27 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:21:27 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:21:27 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:21:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "3b8ce2dd-e424-4cb3-87c9-8d59a559767a"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32432
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:27 INFO  SystemOutputServer:58 - Size of the sending message: 137
+  2024-04-13 14:21:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:27 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='3b8ce2dd-e424-4cb3-87c9-8d59a559767a', fromAbstractionId='', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5} to the abstraction app.beb
+  2024-04-13 14:21:27 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:21:27 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5} to the abstraction app
+  2024-04-13 14:21:27 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "056513e0-93bb-466e-9045-8db3aa277103"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:21:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "056513e0-93bb-466e-9045-8db3aa277103"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "056513e0-93bb-466e-9045-8db3aa277103"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32432
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:27 INFO  SystemOutputServer:58 - Size of the sending message: 133
+  2024-04-13 14:21:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "3965e461-56b6-47b7-9b78-6f9f51d9d178"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32432
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:27 INFO  SystemOutputServer:58 - Size of the sending message: 137
+  2024-04-13 14:21:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:27 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:21:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "90b88e84-cf4d-45e2-8d06-23bc51dbc5b5"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32432
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:27 INFO  SystemOutputServer:58 - Size of the sending message: 137
+  2024-04-13 14:21:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:27 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:21:27 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:21:27 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:21:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "ca05b8bd-54f5-4d05-9a69-bd3044905804"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32432
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:27 INFO  SystemOutputServer:58 - Size of the sending message: 137
+  2024-04-13 14:21:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:27 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:21:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "24c3fceb-c2ca-4966-bc26-c7e10b52852e"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32432
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:27 INFO  SystemOutputServer:58 - Size of the sending message: 137
+  2024-04-13 14:21:27 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 14:21:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:27 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 14:21:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:27 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 14:21:27 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='90b88e84-cf4d-45e2-8d06-23bc51dbc5b5', fromAbstractionId='', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5} to the abstraction app.beb
+  2024-04-13 14:21:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "6607cd66-e23e-4a22-ab27-d5e3ae2b6edc"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32432
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:27 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5} to the abstraction app
+  2024-04-13 14:21:27 INFO  SystemOutputServer:58 - Size of the sending message: 137
+  2024-04-13 14:21:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:27 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "bb1e12bf-e204-493f-842c-dc3ad2ee5324"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:21:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "bb1e12bf-e204-493f-842c-dc3ad2ee5324"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "bb1e12bf-e204-493f-842c-dc3ad2ee5324"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32432
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:27 INFO  SystemOutputServer:58 - Size of the sending message: 133
+  2024-04-13 14:21:27 TRACE PLAbstraction:46 - Deliver the message: type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='24c3fceb-c2ca-4966-bc26-c7e10b52852e', fromAbstractionId='', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5} to the abstraction app.beb
+  2024-04-13 14:21:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 14:21:27 TRACE BebAbstraction:40 - Deliver the message: type: APP_VALUE
+messageUuid: "a51be3cd-5385-4872-b7be-c0a304b8e3f4"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5} to the abstraction app
+  2024-04-13 14:21:27 TRACE PLAbstraction:71 - Send message type: APP_VALUE
+messageUuid: "b875bbbc-d0f8-4150-b90c-a4fb61a374bf"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32432
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 14:21:27 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "b875bbbc-d0f8-4150-b90c-a4fb61a374bf"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "b875bbbc-d0f8-4150-b90c-a4fb61a374bf"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32432
+      }
+    }
+  }
+}
+
+  2024-04-13 14:21:27 INFO  SystemOutputServer:58 - Size of the sending message: 133
+  2024-04-13 14:21:27 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 14:21:27 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:51:09 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:51:09 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:51:09 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:51:09 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "9d57e748-b7f9-4346-9e2a-9e23276a8cab"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:51:09 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "9d57e748-b7f9-4346-9e2a-9e23276a8cab"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "9d57e748-b7f9-4346-9e2a-9e23276a8cab"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 16:51:09 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:51:09 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:51:09 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:51:22 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:51:22 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:51:22 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:51:22 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "17c9e209-e329-4651-8d52-90bb3eac64af"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 2
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:51:22 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "17c9e209-e329-4651-8d52-90bb3eac64af"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "17c9e209-e329-4651-8d52-90bb3eac64af"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 2
+    }
+  }
+}
+
+  2024-04-13 16:51:22 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:51:22 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:51:22 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:51:34 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:51:35 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:51:35 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:51:35 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "89191722-667e-428f-8b61-dcd04773d7e6"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 3
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:51:35 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "89191722-667e-428f-8b61-dcd04773d7e6"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "89191722-667e-428f-8b61-dcd04773d7e6"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 3
+    }
+  }
+}
+
+  2024-04-13 16:51:35 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:51:35 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:51:35 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:51:42 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:51:42 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:51:42 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:51:42 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:51:42 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:51:42 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:51:42 TRACE PLAbstraction:52 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "c8d3ddbe-4c7b-488a-b18b-ea02d75fe638"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4002
+    owner: "abc"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 4
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 5
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 6
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 16:51:42 TRACE PLAbstraction:52 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "3d29ea52-c611-454b-b9ff-006ab44d1ab8"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4002
+    owner: "abc"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 4
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 5
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 6
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=2, rank=-1} to the abstraction app
+  2024-04-13 16:51:42 TRACE PLAbstraction:52 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "62850b4f-5632-4690-b2ab-35b884bec24c"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4002
+    owner: "abc"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 4
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 5
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 6
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=3, rank=-1} to the abstraction app
+  2024-04-13 16:51:42 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 16:51:42 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3}
+  2024-04-13 16:51:42 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3} and initialise the rank with 3
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4}
+  2024-04-13 16:51:42 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=6}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 16:51:42 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 16:51:42 INFO  AppAbstraction:78 - abc-1: Starting system sys-1
+  2024-04-13 16:51:42 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5} and initialise the rank with 5
+  2024-04-13 16:51:42 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=6}
+  2024-04-13 16:51:42 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 16:51:42 INFO  AppAbstraction:78 - abc-2: Starting system sys-1
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5}
+  2024-04-13 16:51:42 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=6}
+  2024-04-13 16:51:42 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 16:51:42 INFO  AppAbstraction:78 - abc-3: Starting system sys-1
+  2024-04-13 16:54:23 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:54:24 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:54:24 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:54:24 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "66a1a532-9744-42fa-869a-401451922a69"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 3
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:54:24 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "66a1a532-9744-42fa-869a-401451922a69"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "66a1a532-9744-42fa-869a-401451922a69"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 3
+    }
+  }
+}
+
+  2024-04-13 16:54:24 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:54:24 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:54:24 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:54:34 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:54:34 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:54:34 TRACE PLAbstraction:52 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "261407d1-2628-4507-a8e5-09ca9e9795f2"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=3, rank=-1} to the abstraction app
+  2024-04-13 16:54:34 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=3} and initialise the rank with 3
+  2024-04-13 16:54:34 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 16:54:34 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=1}
+  2024-04-13 16:54:34 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=2}
+  2024-04-13 16:54:34 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=3}
+  2024-04-13 16:54:34 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 16:54:34 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 16:54:34 INFO  AppAbstraction:78 - abc-3: Starting system sys-1
+  2024-04-13 16:54:48 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:54:48 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:54:48 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:54:48 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "bd4a0929-3863-4c36-b998-e1bfea4e2b33"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 3
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:54:48 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "bd4a0929-3863-4c36-b998-e1bfea4e2b33"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "bd4a0929-3863-4c36-b998-e1bfea4e2b33"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 3
+    }
+  }
+}
+
+  2024-04-13 16:54:48 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:54:48 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:54:48 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:55:01 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:55:01 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:55:01 TRACE PLAbstraction:52 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "18b72d8b-8890-493b-80dd-16e3d418d6a7"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=3, rank=-1} to the abstraction app
+  2024-04-13 16:55:18 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=1} and initialise the rank with 1
+  2024-04-13 16:55:18 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 16:55:18 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=1}
+  2024-04-13 16:55:18 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 16:55:18 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 16:55:18 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 16:55:18 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 16:55:18 INFO  AppAbstraction:78 - abc-3: Starting system sys-1
+  2024-04-13 16:56:49 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:56:49 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:56:49 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:56:50 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "73146739-43da-41e0-8c3a-a969a66ff9af"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 3
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:56:50 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "73146739-43da-41e0-8c3a-a969a66ff9af"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "73146739-43da-41e0-8c3a-a969a66ff9af"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 3
+    }
+  }
+}
+
+  2024-04-13 16:56:50 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:56:50 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:56:50 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:56:57 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:56:57 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:56:57 TRACE PLAbstraction:52 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "2a1a0259-9366-4b60-b88c-7d5cb6a96cf3"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 4
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=3, rank=-1} to the abstraction app
+  2024-04-13 16:56:57 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=1} and initialise the rank with 1
+  2024-04-13 16:56:57 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 16:56:57 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=1}
+  2024-04-13 16:56:57 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 16:56:57 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3}
+  2024-04-13 16:56:57 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=4}
+  2024-04-13 16:56:57 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 16:56:57 INFO  AppAbstraction:78 - abc-3: Starting system sys-1
+  2024-04-13 16:57:07 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:57:07 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:07 TRACE PLAbstraction:52 - Deliver the message: type: APP_BROADCAST
+messageUuid: "2f4ef876-e0fe-4046-9589-f21ea7cdb440"
+FromAbstractionId: "hub"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appBroadcast {
+  value {
+    defined: true
+    v: 45
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=3, rank=-1} to the abstraction app
+  2024-04-13 16:57:07 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 45
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:57:07 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:57:07 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:07 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "19181727-388c-422b-8c66-9512c86d033b"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 45
+      }
+    }
+  }
+}
+
+  2024-04-13 16:57:07 INFO  SystemOutputServer:58 - Size of the sending message: 135
+  2024-04-13 16:57:07 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:57:07 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:57:07 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 45
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:57:07 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "94904a60-ecf4-4dc7-b1f1-d8f5b0910f27"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 45
+      }
+    }
+  }
+}
+
+  2024-04-13 16:57:07 INFO  SystemOutputServer:58 - Size of the sending message: 135
+  2024-04-13 16:57:07 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:57:07 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:57:07 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 45
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:57:07 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "b17facb9-4ce4-4bdc-b5fa-6ca72ef86db1"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 45
+      }
+    }
+  }
+}
+
+  2024-04-13 16:57:07 INFO  SystemOutputServer:58 - Size of the sending message: 135
+  2024-04-13 16:57:07 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:57:07 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:57:07 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 45
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:57:07 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "600aaf7d-97cf-4b9c-8624-59f9f07a2bdb"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 45
+      }
+    }
+  }
+}
+
+  2024-04-13 16:57:07 INFO  SystemOutputServer:58 - Size of the sending message: 135
+  2024-04-13 16:57:07 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:57:07 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:57:07 TRACE PLAbstraction:52 - Deliver the message: type: APP_VALUE
+messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 45
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='19181727-388c-422b-8c66-9512c86d033b', fromAbstractionId='', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=1} to the abstraction app.beb
+  2024-04-13 16:57:07 TRACE BebAbstraction:50 - Deliver the message: type: APP_VALUE
+messageUuid: "a947e1e2-d3a2-481b-9d32-3452fdbfc8cd"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 45
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=1} to the abstraction app
+  2024-04-13 16:57:07 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "ce453ecd-8c9d-414a-abf3-ecf90251062c"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 45
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:57:07 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "ce453ecd-8c9d-414a-abf3-ecf90251062c"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "ce453ecd-8c9d-414a-abf3-ecf90251062c"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 45
+      }
+    }
+  }
+}
+
+  2024-04-13 16:57:07 INFO  SystemOutputServer:58 - Size of the sending message: 131
+  2024-04-13 16:57:07 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:57:07 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:57:16 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:57:16 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:16 TRACE PLAbstraction:52 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 34
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='ad758efd-c62d-4f7d-98cb-bd4eb5525ef9', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3} to the abstraction app.beb
+  2024-04-13 16:57:16 TRACE BebAbstraction:50 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 34
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=3} to the abstraction app
+  2024-04-13 16:57:16 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "2ab7178b-f98c-41b3-b2a4-541848f48566"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 34
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:57:16 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "2ab7178b-f98c-41b3-b2a4-541848f48566"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "2ab7178b-f98c-41b3-b2a4-541848f48566"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 34
+      }
+    }
+  }
+}
+
+  2024-04-13 16:57:16 INFO  SystemOutputServer:58 - Size of the sending message: 131
+  2024-04-13 16:57:16 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:57:16 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:57:24 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:57:24 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:57:25 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:25 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "3df59a26-6452-4433-a978-7691acd44d8e"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 3
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:57:25 ERROR SystemOutputServer:34 - Error in creating output socket connection: Connection refused: connect
+  2024-04-13 16:57:30 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:57:31 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:57:31 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:31 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "6630608c-87b0-4680-806a-bc126e84ebc7"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 3
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:57:31 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "6630608c-87b0-4680-806a-bc126e84ebc7"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "6630608c-87b0-4680-806a-bc126e84ebc7"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 3
+    }
+  }
+}
+
+  2024-04-13 16:57:31 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:57:31 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:57:31 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:57:43 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:57:43 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:57:43 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:43 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "27e703e6-a804-44d2-964b-5c47e1800e9a"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 2
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:57:43 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "27e703e6-a804-44d2-964b-5c47e1800e9a"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "27e703e6-a804-44d2-964b-5c47e1800e9a"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 2
+    }
+  }
+}
+
+  2024-04-13 16:57:43 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:57:43 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:57:43 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:57:50 TRACE DistributedSystem:56 - Initialise the system sys-1 with the processes: null
+  2024-04-13 16:57:50 INFO  SystemInputServer:21 - SystemInputServer has started!
+  2024-04-13 16:57:50 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:51 TRACE PLAbstraction:77 - Send message type: PROC_REGISTRATION
+messageUuid: "243588a0-f9da-449f-9b00-5da1b9caee3d"
+ToAbstractionId: "app"
+systemId: "sys-1"
+procRegistration {
+  owner: "abc"
+  index: 1
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:57:51 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "243588a0-f9da-449f-9b00-5da1b9caee3d"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: PROC_REGISTRATION
+    messageUuid: "243588a0-f9da-449f-9b00-5da1b9caee3d"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    procRegistration {
+      owner: "abc"
+      index: 1
+    }
+  }
+}
+
+  2024-04-13 16:57:51 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:57:51 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:57:51 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:57:58 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:57:58 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:57:58 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:58 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:57:58 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:58 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:57:58 TRACE PLAbstraction:52 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "4bdd371a-7d97-44a1-8b98-4c5e459ef7f5"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4002
+    owner: "abc"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 4
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 5
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 6
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=1, rank=-1} to the abstraction app
+  2024-04-13 16:57:58 TRACE PLAbstraction:52 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "f89c0e60-dd2d-4481-afdc-357a30d6585b"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4002
+    owner: "abc"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 4
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 5
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 6
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=3, rank=-1} to the abstraction app
+  2024-04-13 16:57:58 TRACE PLAbstraction:52 - Deliver the message: type: PROC_INITIALIZE_SYSTEM
+messageUuid: "5c7a8540-1153-4f63-ac4a-6043f9856b4e"
+systemId: "sys-1"
+procInitializeSystem {
+  processes {
+    host: "127.0.0.1"
+    port: 4001
+    owner: "abc"
+    index: 1
+    rank: 1
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5001
+    owner: "ref"
+    index: 1
+    rank: 2
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4002
+    owner: "abc"
+    index: 2
+    rank: 3
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5002
+    owner: "ref"
+    index: 2
+    rank: 4
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 4003
+    owner: "abc"
+    index: 3
+    rank: 5
+  }
+  processes {
+    host: "127.0.0.1"
+    port: 5003
+    owner: "ref"
+    index: 3
+    rank: 6
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=2, rank=-1} to the abstraction app
+  2024-04-13 16:57:58 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1} and initialise the rank with 1
+  2024-04-13 16:57:58 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3} and initialise the rank with 3
+  2024-04-13 16:57:58 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 16:57:58 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 16:57:58 INFO  DistributedSystem:92 - Found my own process: ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5} and initialise the rank with 5
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 16:57:58 INFO  DistributedSystem:98 - The list of processes received is: 
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4001, owner='abc', index=1, rank=1}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5001, owner='ref', index=1, rank=2}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=6}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4}
+  2024-04-13 16:57:58 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=6}
+  2024-04-13 16:57:58 INFO  AppAbstraction:78 - abc-2: Starting system sys-1
+  2024-04-13 16:57:58 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4}
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=4003, owner='abc', index=3, rank=5}
+  2024-04-13 16:57:58 INFO  AppAbstraction:78 - abc-1: Starting system sys-1
+  2024-04-13 16:57:58 INFO  DistributedSystem:100 - ProcessNode{host='127.0.0.1', port=5003, owner='ref', index=3, rank=6}
+  2024-04-13 16:57:58 INFO  DistributedSystem:102 - ----------------------END  list of processes for initialising system----------------------------
+  2024-04-13 16:57:58 INFO  AppAbstraction:78 - abc-3: Starting system sys-1
+  2024-04-13 16:58:08 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:58:08 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:58:08 TRACE PLAbstraction:52 - Deliver the message: type: APP_BROADCAST
+messageUuid: "03c5d420-8818-498d-ac8d-8463c5e38672"
+FromAbstractionId: "hub"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appBroadcast {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='', fromAbstractionId='', toAbstractionId='app.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5000, owner='abc', index=2, rank=-1} to the abstraction app
+  2024-04-13 16:58:08 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:58:08 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:58:08 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:58:08 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "928e4efd-961e-4e2c-935b-342ae29eee70"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 334
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:08 INFO  SystemOutputServer:58 - Size of the sending message: 136
+  2024-04-13 16:58:08 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:08 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:08 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:58:08 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "0f9cbd0d-0175-4e76-94e9-a0c81994f982"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 334
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:08 INFO  SystemOutputServer:58 - Size of the sending message: 136
+  2024-04-13 16:58:08 TRACE PLAbstraction:52 - Deliver the message: type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='928e4efd-961e-4e2c-935b-342ae29eee70', fromAbstractionId='', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3} to the abstraction app.beb
+  2024-04-13 16:58:08 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:08 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:08 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:58:08 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "03535d56-2616-469e-8deb-5ec6666e3ddf"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 334
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:08 INFO  SystemOutputServer:58 - Size of the sending message: 136
+  2024-04-13 16:58:08 TRACE BebAbstraction:50 - Deliver the message: type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3} to the abstraction app
+  2024-04-13 16:58:08 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:08 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:08 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "45c29dbf-1fda-4ebe-afd0-b544c0fe4c29"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:58:08 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:58:08 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "45c29dbf-1fda-4ebe-afd0-b544c0fe4c29"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "45c29dbf-1fda-4ebe-afd0-b544c0fe4c29"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 334
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:08 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:58:08 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:08 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:08 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:58:08 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:58:08 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "da14922f-f9c6-4dd4-a3d9-6bae93560b66"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 334
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:08 INFO  SystemOutputServer:58 - Size of the sending message: 136
+  2024-04-13 16:58:08 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:08 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:08 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:58:08 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "d1cb4bf3-44cd-49d8-8df8-c503032f33a7"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 334
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:08 INFO  SystemOutputServer:58 - Size of the sending message: 136
+  2024-04-13 16:58:08 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:08 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:08 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ to the abstraction app.beb.pl by PL send
+  2024-04-13 16:58:08 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:58:08 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:58:08 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "e55f4051-9ef2-4a78-8260-9cca9c41206d"
+ToAbstractionId: "app.beb.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 334
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:08 INFO  SystemOutputServer:58 - Size of the sending message: 136
+  2024-04-13 16:58:08 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:08 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:08 TRACE PLAbstraction:52 - Deliver the message: type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='03535d56-2616-469e-8deb-5ec6666e3ddf', fromAbstractionId='', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3} to the abstraction app.beb
+  2024-04-13 16:58:08 TRACE BebAbstraction:50 - Deliver the message: type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3} to the abstraction app
+  2024-04-13 16:58:08 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "d45d3ee2-cdc9-4bd9-b3ff-1bf60f924cab"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:58:08 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "d45d3ee2-cdc9-4bd9-b3ff-1bf60f924cab"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "d45d3ee2-cdc9-4bd9-b3ff-1bf60f924cab"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 334
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:08 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:58:08 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:08 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:08 TRACE PLAbstraction:52 - Deliver the message: type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='d1cb4bf3-44cd-49d8-8df8-c503032f33a7', fromAbstractionId='', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3} to the abstraction app.beb
+  2024-04-13 16:58:08 TRACE BebAbstraction:50 - Deliver the message: type: APP_VALUE
+messageUuid: "f789b9a2-5df0-4e5e-a5ba-6572e59575de"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=4002, owner='abc', index=2, rank=3} to the abstraction app
+  2024-04-13 16:58:08 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "1e6cf10e-a58e-4c49-acd4-162f6290a100"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 334
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:58:08 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "1e6cf10e-a58e-4c49-acd4-162f6290a100"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "1e6cf10e-a58e-4c49-acd4-162f6290a100"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 334
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:08 INFO  SystemOutputServer:58 - Size of the sending message: 132
+  2024-04-13 16:58:08 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:08 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:21 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:58:21 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:58:21 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:58:21 TRACE PLAbstraction:52 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 32
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='4642a745-e18f-4a74-984e-29bb13431748', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app.beb
+  2024-04-13 16:58:21 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:58:21 TRACE BebAbstraction:50 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 32
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app
+  2024-04-13 16:58:21 INFO  AbstractSystemInputServer:28 - Client connected ...
+  2024-04-13 16:58:21 TRACE AbstractSystemInputServer:26 - Waiting for clients ...
+  2024-04-13 16:58:21 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "9cd82ff6-faa4-46f3-9ec7-465719601728"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:58:21 TRACE PLAbstraction:52 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 32
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='443f9035-dae1-432e-beaf-eec35d16d4ad', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app.beb
+  2024-04-13 16:58:21 TRACE BebAbstraction:50 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 32
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app
+  2024-04-13 16:58:21 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "c3aa9d6d-83cc-4186-8341-f19741838feb"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:58:21 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "9cd82ff6-faa4-46f3-9ec7-465719601728"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4001
+  message {
+    type: APP_VALUE
+    messageUuid: "9cd82ff6-faa4-46f3-9ec7-465719601728"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:21 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "c3aa9d6d-83cc-4186-8341-f19741838feb"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4002
+  message {
+    type: APP_VALUE
+    messageUuid: "c3aa9d6d-83cc-4186-8341-f19741838feb"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:21 INFO  SystemOutputServer:58 - Size of the sending message: 131
+  2024-04-13 16:58:21 INFO  SystemOutputServer:58 - Size of the sending message: 131
+  2024-04-13 16:58:21 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:21 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:21 TRACE PLAbstraction:52 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 32
+  }
+}
+ with the metadata: MetaInfoMessage{type=NETWORK_MESSAGE, messageUuid='33a35ec4-546a-4cc0-872a-d177eee1fa20', fromAbstractionId='app.beb.pl', toAbstractionId='app.beb.pl', systemId='sys-1'} sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app.beb
+  2024-04-13 16:58:21 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:21 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  2024-04-13 16:58:21 TRACE BebAbstraction:50 - Deliver the message: type: APP_VALUE
+FromAbstractionId: "app"
+ToAbstractionId: "app"
+appValue {
+  value {
+    defined: true
+    v: 32
+  }
+}
+ sent by ProcessNode{host='127.0.0.1', port=5002, owner='ref', index=2, rank=4} to the abstraction app
+  2024-04-13 16:58:21 TRACE PLAbstraction:77 - Send message type: APP_VALUE
+messageUuid: "42913f75-72ab-4817-bd01-90b5ea9f8803"
+ToAbstractionId: "app"
+systemId: "sys-1"
+appValue {
+  value {
+    defined: true
+    v: 32
+  }
+}
+ to the abstraction app.pl by PL send
+  2024-04-13 16:58:21 INFO  SystemOutputServer:57 - Sending request ... 
+messageUuid: "42913f75-72ab-4817-bd01-90b5ea9f8803"
+ToAbstractionId: "app.pl"
+systemId: "sys-1"
+networkMessage {
+  senderHost: "127.0.0.1"
+  senderListeningPort: 4003
+  message {
+    type: APP_VALUE
+    messageUuid: "42913f75-72ab-4817-bd01-90b5ea9f8803"
+    ToAbstractionId: "app"
+    systemId: "sys-1"
+    appValue {
+      value {
+        defined: true
+        v: 32
+      }
+    }
+  }
+}
+
+  2024-04-13 16:58:21 INFO  SystemOutputServer:58 - Size of the sending message: 131
+  2024-04-13 16:58:21 INFO  SystemOutputServer:72 - Request has been sent!
+  2024-04-13 16:58:21 TRACE SystemOutputServer:43 - OutputStream connection has been closed!
+  

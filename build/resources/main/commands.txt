@@ -1,2 +1,5 @@
 andreidaniel@AndreiBalanici:/mnt/e/UBB-Didactic/ICA_An_1/AlgMoCo/DistributedSystem/src/main/resources$
 ../../../../protc-26.0-win64/bin/protoc.exe --java_out=../java communication-protocol.proto
+
+
+E:\UBB-Didactic\ICA_An_1\AlgMoCo\DistributedSystem\build\libs>java.exe -Dserver.port=4000 -cp NodesDistrib-1.0-SNAPSHOT.jar;protobuf-java-4.26.0.jar Main "127.0.0.1" "5000" "127.0.0.1" "4001" "abc" "1"

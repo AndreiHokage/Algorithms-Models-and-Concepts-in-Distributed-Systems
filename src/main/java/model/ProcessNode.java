@@ -10,11 +10,30 @@ public class ProcessNode {
 
     private Integer index;
 
+    private Integer rank;
+
+    public ProcessNode(String host, Integer port) {
+        this.host = host;
+        this.port = port;
+        this.owner = null;
+        this.index = null;
+        this.rank = null;
+    }
+
     public ProcessNode(String host, Integer port, String owner, Integer index) {
         this.host = host;
         this.port = port;
         this.owner = owner;
         this.index = index;
+        this.rank = null;
+    }
+
+    public ProcessNode(String host, Integer port, String owner, Integer index, Integer rank) {
+        this.host = host;
+        this.port = port;
+        this.owner = owner;
+        this.index = index;
+        this.rank = rank;
     }
 
     public String getHost() {
@@ -51,5 +70,32 @@ public class ProcessNode {
 
     public String getNameNode(){
         return owner + "-" + index.toString();
+    }
+
+    public Integer getRank() {
+        return rank;
+    }
+
+    public void setRank(Integer rank) {
+        this.rank = rank;
+    }
+
+    /**
+     * A PROCESS IS UNIQUELY IDENTIFIED BY ITS IP AND PORT
+     * @return
+     */
+    public String getUUIDProcessNode(){
+        return host + "-" + port;
+    }
+
+    @Override
+    public String toString() {
+        return "ProcessNode{" +
+                "host='" + host + '\'' +
+                ", port=" + port +
+                ", owner='" + owner + '\'' +
+                ", index=" + index +
+                ", rank=" + rank +
+                '}';
     }
 }
