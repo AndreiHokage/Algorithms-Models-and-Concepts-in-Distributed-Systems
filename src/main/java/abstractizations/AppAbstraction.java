@@ -4,8 +4,12 @@ import model.DistributedSystem;
 import model.Hub;
 import model.MyselfNode;
 import model.ProcessNode;
+import networking.AppRead;
+import networking.AppWrite;
 import networking.Message;
+import networking.Value;
 import org.apache.log4j.Logger;
+import processing.CatalogueAbstractions;
 import processing.ProtoDeserialiseUtils;
 import processing.ProtoSerialiseUtils;
 import utils.IntfConstants;
@@ -78,6 +82,50 @@ public class AppAbstraction implements Abstraction{
             logger.info(MyselfNode.createNewInstance().getNameNode() + ": Starting system " + DistributedSystem.createNewInstance().getSystemId());
         }
 
+        if(content.getType().equals(Message.Type.APP_WRITE)){
+            AppWrite appWriteMessage = content.getAppWrite();
+            String register = appWriteMessage.getRegister();
+            Value appValue = appWriteMessage.getValue();
+
+            // create a register `register` if it didn't exist yet and lock it
+            CatalogueAbstractions.getNnarAbstraction(register);
+
+            if(!CatalogueAbstractions.getNnarAbstraction(register).isLocked()){
+                CatalogueAbstractions.getNnarAbstraction(register).lockRegister();
+            } else {
+                return null; // need to finish the operation and after that will be released
+            }
+
+            String generatedUUID = UUID.randomUUID().toString();
+            String toAbstractionId = "app" + "." + IntfConstants.NNAR_ABS + "[" + register + "]";
+            MetaInfoMessage metaInfoMessageNnarWriteMessage = new MetaInfoMessage(Message.Type.NNAR_WRITE, generatedUUID,
+                    null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
+            networking.Message nnarWriteMessage = ProtoSerialiseUtils.createNnarWriteMessage(appValue, metaInfoMessageNnarWriteMessage);
+
+            return nnarWriteMessage;
+        }
+
+        if(content.getType().equals(Message.Type.APP_READ)){
+            AppRead appReadMessage = content.getAppRead();
+            String register = appReadMessage.getRegister();
+
+            // create a register `register` if it didn't exist yet and lock it
+            CatalogueAbstractions.getNnarAbstraction(register);
+            if(!CatalogueAbstractions.getNnarAbstraction(register).isLocked()){
+                CatalogueAbstractions.getNnarAbstraction(register).lockRegister();
+            } else {
+                return null; // need to finish the operation and after that will be released
+            }
+
+            String generatedUUID = UUID.randomUUID().toString();
+            String toAbstractionId = "app" + "." + IntfConstants.NNAR_ABS + "[" + register + "]";
+            MetaInfoMessage metaInfoMessageNnarReadMessage = new MetaInfoMessage(Message.Type.NNAR_READ, generatedUUID,
+                    null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
+            networking.Message nnarReadMessage = ProtoSerialiseUtils.createNnarReadMessage(metaInfoMessageNnarReadMessage);
+
+            return nnarReadMessage;
+        }
+
         return null;
     }
 
@@ -103,6 +151,45 @@ public class AppAbstraction implements Abstraction{
         networking.Message plSendMessageConfirmationBeb = ProtoSerialiseUtils.createPLSendMessage(appValueMessage, metaInfoMessagePLSend, processNodeHub);
 
         return plSendMessageConfirmationBeb;
+    }
+
+    public networking.Message handlingNnarWriteReturn(networking.NnarWriteReturn message, MetaInfoMessage metaInfoMessage){
+        String releasedIdRegister = MyselfNode.createNewInstance().getReleasedLockRegisters().get(metaInfoMessage.getMessageUuid());
+        String toAbstractionId = "app" + "." + IntfConstants.PL_ABS;
+        String generatedUUID = UUID.randomUUID().toString();
+
+        MetaInfoMessage metaInfoMessageAppWriteReturn = new MetaInfoMessage(Message.Type.APP_WRITE_RETURN, generatedUUID,
+                null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
+        networking.Message appWriteReturnMessage = ProtoSerialiseUtils.createAppWriteReturnMessage(releasedIdRegister, metaInfoMessageAppWriteReturn);
+
+        MetaInfoMessage metaInfoMessagePLSend = new MetaInfoMessage(Message.Type.PL_SEND, generatedUUID,
+                null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
+        networking.Message plSendMessage = ProtoSerialiseUtils.createPLSendMessage(appWriteReturnMessage, metaInfoMessagePLSend,
+                DistributedSystem.createNewInstance().getHub());
+        MyselfNode.createNewInstance().removeRegistrationReleaseLockRegister(metaInfoMessage.getMessageUuid());
+        CatalogueAbstractions.getNnarAbstraction(releasedIdRegister).releaseLockRegister();
+
+        return plSendMessage;
+    }
+
+    public networking.Message handlingNnarReadReturn(networking.NnarReadReturn message, MetaInfoMessage metaInfoMessage){
+        String releasedIdRegister = MyselfNode.createNewInstance().getReleasedLockRegisters().get(metaInfoMessage.getMessageUuid());
+        String toAbstractionId = "app" + "." + IntfConstants.PL_ABS;
+        String generatedUUID = UUID.randomUUID().toString();
+
+        MetaInfoMessage metaInfoMessage1AppReadReturn = new MetaInfoMessage(Message.Type.APP_READ_RETURN, generatedUUID,
+                null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
+        networking.Value readVal = ProtoSerialiseUtils.createValueMessage(message.getValue().getV());
+        networking.Message appReadReturnMessage = ProtoSerialiseUtils.createAppReadReturnMessage(readVal, releasedIdRegister, metaInfoMessage1AppReadReturn);
+
+        MetaInfoMessage metaInfoMessagePLSend = new MetaInfoMessage(Message.Type.PL_SEND, generatedUUID,
+                null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
+        networking.Message plSendMessage = ProtoSerialiseUtils.createPLSendMessage(appReadReturnMessage, metaInfoMessagePLSend,
+                DistributedSystem.createNewInstance().getHub());
+        MyselfNode.createNewInstance().removeRegistrationReleaseLockRegister(metaInfoMessage.getMessageUuid());
+        CatalogueAbstractions.getNnarAbstraction(releasedIdRegister).releaseLockRegister();
+
+        return plSendMessage;
     }
 
     public networking.Message handlingProcRegistration(){

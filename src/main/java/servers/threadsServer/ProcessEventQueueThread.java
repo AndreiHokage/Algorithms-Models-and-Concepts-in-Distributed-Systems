@@ -3,10 +3,7 @@ package servers.threadsServer;
 import abstractizations.*;
 import model.EventQueue;
 import org.apache.log4j.Logger;
-import processing.factoryAbstractizations.ManageEventAPPFactory;
-import processing.factoryAbstractizations.ManageEventAbstractFactory;
-import processing.factoryAbstractizations.ManageEventBEBFactory;
-import processing.factoryAbstractizations.ManageEventPLFactory;
+import processing.factoryAbstractizations.*;
 import utils.IntfConstants;
 
 import java.util.List;
@@ -30,6 +27,10 @@ public class ProcessEventQueueThread extends Thread{
             return ManageEventBEBFactory.createNewInstance();
         }
 
+        if(abstractionAlgorithm.startsWith(IntfConstants.NNAR_ABS)){
+            return ManageEventNNARFactory.createNewInstance();
+        }
+
         if(abstractionAlgorithm.equals(IntfConstants.APP_ABS)){
             return ManageEventAPPFactory.createNewInstance();
         }
@@ -44,7 +45,9 @@ public class ProcessEventQueueThread extends Thread{
             abstractionAlgorithm = AbstractionUtils.getCurrentAbstraction(message.getFromAbstractionId());
         }
 
+        // determine the abstraction factory based on abstractionAlgorithm attribute. Return just the abstraction that will handle the message
         ManageEventAbstractFactory manageEventAbstractFactory = createManageEventAbstractFactory(abstractionAlgorithm);
+        // handle the event based on the type of the message. Provide the logic within the abstraction for dealing with that the of message
         List<networking.Message> messageList = manageEventAbstractFactory.handleEvent(message);
 
         for(networking.Message outcome: messageList) {

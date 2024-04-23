@@ -134,4 +134,8 @@ public class DistributedSystem {
     public void setHub(Hub hub) {
         this.hub = hub;
     }
+
+    public Integer getNumberProcessesSystem(){
+        return DistributedSystem.createNewInstance().processNodesMap.size();
+    }
 }

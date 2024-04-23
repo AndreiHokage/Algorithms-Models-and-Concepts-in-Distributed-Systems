@@ -22,4 +22,12 @@ public class AbstractionUtils {
         String answer = parts[parts.length - 1];
         return answer;
     }
+
+    public static String extractRegisterIDFromNNAR(String nnarAbstractisation){
+        int index_left = nnarAbstractisation.indexOf('[');
+        int index_right = nnarAbstractisation.indexOf(']');
+
+        String nnarRegister = nnarAbstractisation.substring(index_left + 1, index_right);
+        return nnarRegister;
+    }
 }

@@ -45,6 +45,20 @@ public class ManageEventAPPFactory extends ManageEventAbstractFactory {
             }
         }
 
+        if(typeMessage.equals(Message.Type.NNAR_WRITE_RETURN)){
+            networking.Message outcome = CatalogueAbstractions.getAppAbstraction().handlingNnarWriteReturn(message.getNnarWriteReturn(), metaInfoMessage);
+            if(outcome != null) {
+                messageList.add(outcome);
+            }
+        }
+
+        if(typeMessage.equals(Message.Type.NNAR_READ_RETURN)){
+            networking.Message outcome = CatalogueAbstractions.getAppAbstraction().handlingNnarReadReturn(message.getNnarReadReturn(), metaInfoMessage);
+            if(outcome != null) {
+                messageList.add(outcome);
+            }
+        }
+
         return messageList;
     }
 }

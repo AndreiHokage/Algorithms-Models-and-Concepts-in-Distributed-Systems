@@ -78,14 +78,25 @@ public class ProcessingInputRequestWorker implements Runnable {
         }
     }
 
+    private void closeInputConnection(){
+        try{
+            this.inputStream.close();
+            this.connection.close();
+        } catch (IOException e) {
+            logger.error("Error closing the input stream connection: " + e.getMessage());
+        }
+    }
+
     @Override
     public void run() {
         int lengthMessage = readLengthMessage();
         networking.Message message = readContentMessage(lengthMessage);
         try {
-            eventQueue.getEventsQueue().put(message);
+            eventQueue.getEventsQueue().put(message); // read the message and close the connection. Not wait after completion of handilng the message => asynchronous
         } catch (InterruptedException e) {
             logger.error("Error putting the message into eventQueue: " + e.getMessage());
+        } finally {
+            closeInputConnection();
         }
     }
 

@@ -1,6 +1,7 @@
 package processing;
 
 import abstractizations.MetaInfoMessage;
+import abstractizations.NnarDefinedValue;
 import model.MyselfNode;
 import model.ProcessNode;
 import networking.*;
@@ -57,6 +58,14 @@ public class ProtoSerialiseUtils {
         networking.ProcessId processId = builder.build();
 
         return processId;
+    }
+
+    public static networking.Value createValueUndefinedMessage(){
+        return Value.newBuilder().build();
+    }
+
+    public static networking.Value createValueMessage(Integer v){
+        return Value.newBuilder().setV(v).setDefined(true).build();
     }
 
     public static networking.Message createNetworkMessage(Message message, MetaInfoMessage metaInfoMessage){
@@ -153,6 +162,127 @@ public class ProtoSerialiseUtils {
                 .build();
 
         return wrappedAppValueMessage;
+    }
+
+    public static networking.Message createNnarWriteMessage(networking.Value value, MetaInfoMessage metaInfoMessage){
+        networking.NnarWrite nnarWriteMessage = networking.NnarWrite.newBuilder()
+                .setValue(value)
+                .build();
+
+        networking.Message wrappedNnarWriteMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setNnarWrite(nnarWriteMessage)
+                .build();
+
+        return wrappedNnarWriteMessage;
+    }
+
+    public static networking.Message createNnarInternalReadMessage(Integer readId, MetaInfoMessage metaInfoMessage){
+        networking.NnarInternalRead nnarInternalReadMessage = networking.NnarInternalRead.newBuilder()
+                .setReadId(readId)
+                .build();
+
+        networking.Message wrappedNnarInternalReadMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setNnarInternalRead(nnarInternalReadMessage)
+                .build();
+
+        return wrappedNnarInternalReadMessage;
+    }
+
+    public static networking.Message createNnarInternalValueMessage(Integer rid, NnarDefinedValue nnarDefinedValue, MetaInfoMessage metaInfoMessage){
+        networking.NnarInternalValue nnarInternalValueMessage = networking.NnarInternalValue.newBuilder()
+                .setReadId(rid)
+                .setTimestamp(nnarDefinedValue.getTs())
+                .setWriterRank(nnarDefinedValue.getWr())
+                .setValue(createValueMessage(nnarDefinedValue.getVal()))
+                .build();
+
+        networking.Message wrappedNnarInternalValueMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setNnarInternalValue(nnarInternalValueMessage)
+                .build();
+
+        return wrappedNnarInternalValueMessage;
+    }
+
+    public static networking.Message createNnarInternalWriteMessage(Integer rid, NnarDefinedValue nnarDefinedValue, MetaInfoMessage metaInfoMessage){
+        networking.NnarInternalWrite nnarInternalWriteMessage = networking.NnarInternalWrite.newBuilder()
+                .setReadId(rid)
+                .setTimestamp(nnarDefinedValue.getTs())
+                .setWriterRank(nnarDefinedValue.getWr())
+                .setValue(createValueMessage(nnarDefinedValue.getVal()))
+                .build();
+
+        networking.Message wrappedNnarInternalWriteMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setNnarInternalWrite(nnarInternalWriteMessage)
+                .build();
+
+        return wrappedNnarInternalWriteMessage;
+    }
+
+    public static networking.Message createNnarInternalAckMessage(Integer readId, MetaInfoMessage metaInfoMessage){
+        networking.NnarInternalAck nnarInternalAckMessage = networking.NnarInternalAck.newBuilder()
+                .setReadId(readId)
+                .build();
+
+        networking.Message wrappedNnarInternalAckMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setNnarInternalAck(nnarInternalAckMessage)
+                .build();
+
+        return wrappedNnarInternalAckMessage;
+    }
+
+    public static networking.Message createNnarReadReturnMessage(networking.Value value, MetaInfoMessage metaInfoMessage){
+        networking.NnarReadReturn nnarReadReturnMessage = networking.NnarReadReturn.newBuilder()
+                .setValue(value)
+                .build();
+
+        networking.Message wrappedNnarReadReturnMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setNnarReadReturn(nnarReadReturnMessage)
+                .build();
+
+        return wrappedNnarReadReturnMessage;
+    }
+
+    public static networking.Message createNnarWriteReturnMessage(MetaInfoMessage metaInfoMessage){
+        networking.NnarWriteReturn nnarWriteReturnMessage = networking.NnarWriteReturn.newBuilder().build();
+
+        networking.Message wrappedNnarWriteReturnMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setNnarWriteReturn(nnarWriteReturnMessage)
+                .build();
+
+        return wrappedNnarWriteReturnMessage;
+    }
+
+    public static networking.Message createAppWriteReturnMessage(String register, MetaInfoMessage metaInfoMessage){
+        networking.AppWriteReturn appWriteReturnMessage = networking.AppWriteReturn.newBuilder()
+                .setRegister(register)
+                .build();
+
+        networking.Message wrappedAppWriteReturnMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setAppWriteReturn(appWriteReturnMessage)
+                .build();
+
+        return wrappedAppWriteReturnMessage;
+    }
+
+    public static networking.Message createNnarReadMessage(MetaInfoMessage metaInfoMessage){
+        networking.Message wrappedNnarReadMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setNnarRead(networking.NnarRead.newBuilder().build())
+                .build();
+
+        return wrappedNnarReadMessage;
+    }
+
+    public static networking.Message createAppReadReturnMessage(networking.Value value, String register, MetaInfoMessage metaInfoMessage){
+        networking.AppReadReturn appReadReturnMessage = networking.AppReadReturn.newBuilder()
+                .setValue(value)
+                .setRegister(register)
+                .build();
+
+        networking.Message wrappedAppReadReturnMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setAppReadReturn(appReadReturnMessage)
+                .build();
+
+        return wrappedAppReadReturnMessage;
     }
 
 }
