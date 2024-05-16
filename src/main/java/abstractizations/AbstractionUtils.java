@@ -30,4 +30,20 @@ public class AbstractionUtils {
         String nnarRegister = nnarAbstractisation.substring(index_left + 1, index_right);
         return nnarRegister;
     }
+
+    public static String extractEpochIndexIDFromEp(String epAbstractisation){
+        int index_left = epAbstractisation.indexOf('[');
+        int index_right = epAbstractisation.indexOf(']');
+
+        String epochIdx = epAbstractisation.substring(index_left + 1, index_right);
+        return epochIdx;
+    }
+
+    public static String extractTopicConsensusFromUC(String ucAbstractisation){
+        int index_left = ucAbstractisation.indexOf('[');
+        int index_right = ucAbstractisation.indexOf(']');
+
+        String topicConsensus = ucAbstractisation.substring(index_left + 1, index_right);
+        return topicConsensus;
+    }
 }

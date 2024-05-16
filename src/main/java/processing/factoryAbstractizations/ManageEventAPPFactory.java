@@ -59,6 +59,13 @@ public class ManageEventAPPFactory extends ManageEventAbstractFactory {
             }
         }
 
+        if(typeMessage.equals(Message.Type.UC_DECIDE)){
+            networking.Message outcome = CatalogueAbstractions.getAppAbstraction().handlingUCDecide(message.getUcDecide(), metaInfoMessage);
+            if(outcome != null) {
+                messageList.add(outcome);
+            }
+        }
+
         return messageList;
     }
 }

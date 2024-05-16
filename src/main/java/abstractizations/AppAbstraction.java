@@ -126,6 +126,25 @@ public class AppAbstraction implements Abstraction{
             return nnarReadMessage;
         }
 
+        if(content.getType().equals(Message.Type.APP_PROPOSE)) {
+            networking.AppPropose appProposeMessage = content.getAppPropose();
+            String topicConsensus = appProposeMessage.getTopic();
+            Integer proposedValue = appProposeMessage.getValue().getV();
+
+            // create a uniform consensus instance if it didn't exist yet
+            CatalogueAbstractions.getUcAbstraction(topicConsensus);
+
+            String generatedUUID = UUID.randomUUID().toString();
+            String toAbstractionId = "app" + "." + IntfConstants.UC_ABS + "[" + topicConsensus + "]";
+            MetaInfoMessage metaInfoMessageUCPropose = new MetaInfoMessage(Message.Type.UC_PROPOSE, generatedUUID,
+                    null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
+            networking.Message ucProposeMessage = ProtoSerialiseUtils.createUCPropose(proposedValue, metaInfoMessageUCPropose);
+
+            // BALANICI ?? - kick off the epfd
+
+            return ucProposeMessage;
+        }
+
         return null;
     }
 
@@ -188,6 +207,26 @@ public class AppAbstraction implements Abstraction{
                 DistributedSystem.createNewInstance().getHub());
         MyselfNode.createNewInstance().removeRegistrationReleaseLockRegister(metaInfoMessage.getMessageUuid());
         CatalogueAbstractions.getNnarAbstraction(releasedIdRegister).releaseLockRegister();
+
+        return plSendMessage;
+    }
+
+    public networking.Message handlingUCDecide(networking.UcDecide message, MetaInfoMessage metaInfoMessage){
+        Integer decidedValue = message.getValue().getV();
+
+        String toAbstractionId = "app";
+        String generatedUUID = UUID.randomUUID().toString();
+        MetaInfoMessage metaInfoMessageAPPDecide = new MetaInfoMessage(Message.Type.APP_DECIDE, generatedUUID,
+                null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
+        networking.Message appDecideMessage = ProtoSerialiseUtils.createAppDecide(decidedValue, metaInfoMessageAPPDecide);
+
+        toAbstractionId = toAbstractionId + "." + IntfConstants.PL_ABS;
+        MetaInfoMessage metaInfoMessagePLSend = new MetaInfoMessage(Message.Type.PL_SEND, generatedUUID,
+                null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
+        networking.Message plSendMessage = ProtoSerialiseUtils.createPLSendMessage(appDecideMessage, metaInfoMessagePLSend,
+                DistributedSystem.createNewInstance().getHub());
+
+        // BALANICI ?? - shutdown the epfd
 
         return plSendMessage;
     }

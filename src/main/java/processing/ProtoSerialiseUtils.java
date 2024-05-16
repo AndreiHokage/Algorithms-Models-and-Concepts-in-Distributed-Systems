@@ -285,4 +285,243 @@ public class ProtoSerialiseUtils {
         return wrappedAppReadReturnMessage;
     }
 
+    public static networking.Message createEpfdSuspectMessage(MetaInfoMessage metaInfoMessage, ProcessNode suspectedProcessNode){
+        networking.ProcessId processId = convertProcessNodeToProcessId(suspectedProcessNode);
+        networking.EpfdSuspect epfdSuspectMessage = networking.EpfdSuspect.newBuilder()
+                .setProcess(processId)
+                .build();
+
+        networking.Message wrapperEpfdSuspectMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpfdSuspect(epfdSuspectMessage)
+                .build();
+
+        return wrapperEpfdSuspectMessage;
+    }
+
+    public static networking.Message createEpfdRestoreMessage(MetaInfoMessage metaInfoMessage, ProcessNode restoringProcessNode){
+        networking.ProcessId processId = convertProcessNodeToProcessId(restoringProcessNode);
+        networking.EpfdRestore epfdRestoreMessage = networking.EpfdRestore.newBuilder()
+                .setProcess(processId)
+                .build();
+
+        networking.Message wrapperEpfdRestoreMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpfdRestore(epfdRestoreMessage)
+                .build();
+
+        return wrapperEpfdRestoreMessage;
+    }
+
+    public static networking.Message createEpfdInternalHeartbeatRequestMessage(MetaInfoMessage metaInfoMessage){
+        networking.EpfdInternalHeartbeatRequest epfdInternalHeartbeatRequestMessage = networking.EpfdInternalHeartbeatRequest.newBuilder()
+                .build();
+
+        networking.Message wrapperEpfdInternalHeartbeatRequestMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpfdInternalHeartbeatRequest(epfdInternalHeartbeatRequestMessage)
+                .build();
+
+        return wrapperEpfdInternalHeartbeatRequestMessage;
+    }
+
+    public static networking.Message createEpfdInternalHeartbeatReplyMessage(MetaInfoMessage metaInfoMessage){
+        networking.EpfdInternalHeartbeatReply epfdInternalHeartbeatReplyMessage = networking.EpfdInternalHeartbeatReply.newBuilder()
+                .build();
+
+        networking.Message wrapperEpfdInternalHeartbeatReplyMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpfdInternalHeartbeatReply(epfdInternalHeartbeatReplyMessage)
+                .build();
+
+        return wrapperEpfdInternalHeartbeatReplyMessage;
+    }
+
+    public static networking.Message createEldTrustMessage(MetaInfoMessage metaInfoMessage, ProcessNode trustProcess){
+        networking.ProcessId processId = convertProcessNodeToProcessId(trustProcess);
+        networking.EldTrust eldTrustMessage = networking.EldTrust.newBuilder()
+                .setProcess(processId)
+                .build();
+
+        networking.Message wrapperEldTrustMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEldTrust(eldTrustMessage)
+                .build();
+
+        return wrapperEldTrustMessage;
+    }
+
+    public static networking.Message createEcInternalNewEpochMessage(Integer proposedStartEpochTs, MetaInfoMessage metaInfoMessage){
+        networking.EcInternalNewEpoch ecInternalNewEpochMessage = networking.EcInternalNewEpoch.newBuilder()
+                .setTimestamp(proposedStartEpochTs)
+                .build();
+
+        networking.Message wrapperEcInternalNewEpochMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEcInternalNewEpoch(ecInternalNewEpochMessage)
+                .build();
+
+        return wrapperEcInternalNewEpochMessage;
+    }
+
+    public static networking.Message createEcStartEpochMessage(Integer newTimestamp, ProcessNode newLeader, MetaInfoMessage metaInfoMessage){
+        networking.ProcessId processId = convertProcessNodeToProcessId(newLeader);
+        networking.EcStartEpoch ecStartEpochMessage = networking.EcStartEpoch.newBuilder()
+                .setNewLeader(processId)
+                .setNewTimestamp(newTimestamp)
+                .build();
+
+        networking.Message wrapperEcStartEpochMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEcStartEpoch(ecStartEpochMessage)
+                .build();
+
+        return wrapperEcStartEpochMessage;
+    }
+
+    public static networking.Message createEcInternalNack(MetaInfoMessage metaInfoMessage){
+        networking.EcInternalNack ecInternalNackMessage = networking.EcInternalNack.newBuilder().build();
+
+        networking.Message messageEcInternalNackMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEcInternalNack(ecInternalNackMessage)
+                .build();
+
+        return messageEcInternalNackMessage;
+    }
+
+    public static networking.Message createEpInternalRead(MetaInfoMessage metaInfoMessage){
+        networking.EpInternalRead epInternalReadMessage = networking.EpInternalRead.newBuilder().build();
+
+        networking.Message wrapperEpInternalReadMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpInternalRead(epInternalReadMessage)
+                .build();
+
+        return wrapperEpInternalReadMessage;
+    }
+
+    public static networking.Message createEpInternalState(Integer valueTimestamp, Integer valueEpoch, MetaInfoMessage metaInfoMessage){
+        networking.EpInternalState epInternalStateMessage = networking.EpInternalState.newBuilder()
+                .setValueTimestamp(valueTimestamp)
+                .setValue(createValueMessage(valueEpoch))
+                .build();
+
+        networking.Message wrapperEpInternalReadMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpInternalState(epInternalStateMessage)
+                .build();
+
+        return wrapperEpInternalReadMessage;
+    }
+
+    public static networking.Message createEpInternalWrite(Integer valueEpoch, MetaInfoMessage metaInfoMessage){
+        networking.EpInternalWrite epInternalWriteMessage = networking.EpInternalWrite.newBuilder()
+                .setValue(createValueMessage(valueEpoch))
+                .build();
+
+        networking.Message wrapperEpInternalWriteMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpInternalWrite(epInternalWriteMessage)
+                .build();
+
+        return wrapperEpInternalWriteMessage;
+    }
+
+    public static networking.Message createEpInternalAccept(MetaInfoMessage metaInfoMessage){
+        networking.EpInternalAccept epInternalAcceptMessage = networking.EpInternalAccept.newBuilder().build();
+
+        networking.Message wrapperEpInternalAcceptMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpInternalAccept(epInternalAcceptMessage)
+                .build();
+
+        return wrapperEpInternalAcceptMessage;
+    }
+
+    public static networking.Message createEpInternalDecided(Integer decidedValue, MetaInfoMessage metaInfoMessage){
+        networking.EpInternalDecided epInternalDecidedMessage = networking.EpInternalDecided.newBuilder()
+                .setValue(createValueMessage(decidedValue))
+                .build();
+
+        networking.Message wrapperEpInternalDecidedMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpInternalDecided(epInternalDecidedMessage)
+                .build();
+
+        return wrapperEpInternalDecidedMessage;
+    }
+
+    public static networking.Message createEpDecide(Integer epochCreationTimeStamp, Integer valueDecidedEpoch, MetaInfoMessage metaInfoMessage){
+        networking.EpDecide epDecideMessage = networking.EpDecide.newBuilder()
+                .setEts(epochCreationTimeStamp)
+                .setValue(createValueMessage(valueDecidedEpoch))
+                .build();
+
+        networking.Message wrapperEpDecideMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpDecide(epDecideMessage)
+                .build();
+
+        return wrapperEpDecideMessage;
+    }
+
+    public static networking.Message createEpAborted(Integer epochCreationTimeStamp, Integer valueTimestamp, Integer valueDecidedEpoch, MetaInfoMessage metaInfoMessage){
+        networking.EpAborted epAbortedMessage = networking.EpAborted.newBuilder()
+                .setEts(epochCreationTimeStamp)
+                .setValueTimestamp(valueTimestamp)
+                .setValue(createValueMessage(valueDecidedEpoch))
+                .build();
+
+        networking.Message wrapperEpAbortedMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpAborted(epAbortedMessage)
+                .build();
+
+        return wrapperEpAbortedMessage;
+    }
+
+    public static networking.Message createEpAbort(MetaInfoMessage metaInfoMessage){
+        networking.EpAbort epAbortMessage = networking.EpAbort.newBuilder().build();
+
+        networking.Message wrapperEpAbortMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpAbort(epAbortMessage)
+                .build();
+
+        return wrapperEpAbortMessage;
+    }
+
+    public static networking.Message createUCDecide(Integer decidedValue, MetaInfoMessage metaInfoMessage){
+        networking.UcDecide ucDecideMessage = networking.UcDecide.newBuilder()
+                .setValue(createValueMessage(decidedValue))
+                .build();
+
+        networking.Message wrapperUCDecideMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setUcDecide(ucDecideMessage)
+                .build();
+
+        return wrapperUCDecideMessage;
+    }
+
+    public static networking.Message createEPPropose(Integer proposedValue, MetaInfoMessage metaInfoMessage){
+        networking.EpPropose epProposedMessage = networking.EpPropose.newBuilder()
+                .setValue(createValueMessage(proposedValue))
+                .build();
+
+        networking.Message wrapperEpProposeMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setEpPropose(epProposedMessage)
+                .build();
+
+        return wrapperEpProposeMessage;
+    }
+
+    public static networking.Message createUCPropose(Integer proposedValue, MetaInfoMessage metaInfoMessage){
+        networking.UcPropose ucProposeMessage = networking.UcPropose.newBuilder()
+                .setValue(createValueMessage(proposedValue))
+                .build();
+
+        networking.Message wrapperUCProposeMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setUcPropose(ucProposeMessage)
+                .build();
+
+        return wrapperUCProposeMessage;
+    }
+
+    public static networking.Message createAppDecide(Integer decidedValue, MetaInfoMessage metaInfoMessage){
+        networking.AppDecide appDecideMessage = networking.AppDecide.newBuilder()
+                .setValue(createValueMessage(decidedValue))
+                .build();
+
+        networking.Message wrapperAppDecideMessage = createWrapperGeneralMessage(metaInfoMessage)
+                .setAppDecide(appDecideMessage)
+                .build();
+
+        return wrapperAppDecideMessage;
+    }
+
 }

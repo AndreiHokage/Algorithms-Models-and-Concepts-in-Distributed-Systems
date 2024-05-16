@@ -2,8 +2,10 @@ package processing;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import model.EventQueue;
+import model.HeartBeatQueue;
 import networking.Message;
 import org.apache.log4j.Logger;
+import utils.MessageUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,12 +18,15 @@ public class ProcessingInputRequestWorker implements Runnable {
 
     private EventQueue eventQueue;
 
+    private EventQueue heartBeatQueue;
+
     private Socket connection;
 
     private InputStream inputStream;
 
-    public ProcessingInputRequestWorker(EventQueue eventQueue, Socket connection) {
+    public ProcessingInputRequestWorker(EventQueue eventQueue, EventQueue heartBeatQueue, Socket connection) {
         this.eventQueue = eventQueue;
+        this.heartBeatQueue = heartBeatQueue;
         this.connection = connection;
 
         try {
@@ -92,7 +97,11 @@ public class ProcessingInputRequestWorker implements Runnable {
         int lengthMessage = readLengthMessage();
         networking.Message message = readContentMessage(lengthMessage);
         try {
-            eventQueue.getEventsQueue().put(message); // read the message and close the connection. Not wait after completion of handilng the message => asynchronous
+            if(MessageUtils.checkHeartBeatOriginMessages(message) == false) { // the message is not related to the liveness status of the system
+                eventQueue.getEventsQueue().put(message); // read the message and close the connection. Not wait after completion of handilng the message => asynchronous
+            } else {
+                heartBeatQueue.getEventsQueue().put(message);
+            }
         } catch (InterruptedException e) {
             logger.error("Error putting the message into eventQueue: " + e.getMessage());
         } finally {

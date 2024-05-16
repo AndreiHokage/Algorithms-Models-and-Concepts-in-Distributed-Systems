@@ -17,7 +17,8 @@ public class ManageEventPLFactory extends ManageEventAbstractFactory{
 
     }
 
-    public static ManageEventPLFactory createNewInstance(){
+    // It is accessed by both ProcessEventQueueThread and processHeartBeatQueueThread
+    public synchronized static ManageEventPLFactory createNewInstance(){
         if(manageEventPLFactory == null){
             manageEventPLFactory = new ManageEventPLFactory();
         }

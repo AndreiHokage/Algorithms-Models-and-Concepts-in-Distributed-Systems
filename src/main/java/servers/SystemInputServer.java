@@ -1,6 +1,7 @@
 package servers;
 
 import model.EventQueue;
+import model.HeartBeatQueue;
 import org.apache.log4j.Logger;
 import processing.ProcessingInputRequestWorker;
 
@@ -15,9 +16,12 @@ public class SystemInputServer extends ConcurrentSystemInputServer{
 
     private EventQueue eventQueue;
 
-    public SystemInputServer(int port, EventQueue eventQueue){
+    private EventQueue heartBeatQueue;
+
+    public SystemInputServer(int port, EventQueue eventQueue, EventQueue heartBeatQueue){
         super(port);
         this.eventQueue = eventQueue;
+        this.heartBeatQueue = heartBeatQueue;
         logger.info("SystemInputServer has started!");
     }
 
@@ -29,7 +33,7 @@ public class SystemInputServer extends ConcurrentSystemInputServer{
      */
     @Override
     protected Thread createWorker(Socket client) {
-        Thread worker = new Thread(new ProcessingInputRequestWorker(eventQueue, client));
+        Thread worker = new Thread(new ProcessingInputRequestWorker(eventQueue, heartBeatQueue, client));
         return worker;
     }
 

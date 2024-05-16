@@ -1,6 +1,7 @@
 package model;
 
 import org.apache.log4j.Logger;
+import processing.CatalogueAbstractions;
 import servers.SystemInputServer;
 import servers.SystemOutputServer;
 
@@ -30,6 +31,8 @@ public class DistributedSystem {
     private SystemOutputServer systemOutputServer;
 
     private EventQueue eventQueue;
+
+    private HeartBeatQueue heartBeatQueue;
 
     private Hub hub;
 
@@ -101,6 +104,9 @@ public class DistributedSystem {
         }
         logger.info("----------------------END  list of processes for initialising system----------------------------");
         this.processes = processes;
+
+        logger.info("----------------------Initialize the EPFD abstraction for this process in the system----------------------------");
+        CatalogueAbstractions.getEpfdAbstraction();
     }
 
     public SystemInputServer getSystemInputServer() {
@@ -125,6 +131,14 @@ public class DistributedSystem {
 
     public void setEventQueue(EventQueue eventQueue) {
         this.eventQueue = eventQueue;
+    }
+
+    public HeartBeatQueue getHeartBeatQueue() {
+        return heartBeatQueue;
+    }
+
+    public void setHeartBeatQueue(HeartBeatQueue heartBeatQueue) {
+        this.heartBeatQueue = heartBeatQueue;
     }
 
     public Hub getHub() {

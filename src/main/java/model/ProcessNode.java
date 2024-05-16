@@ -98,4 +98,9 @@ public class ProcessNode {
                 ", rank=" + rank +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.getUUIDProcessNode().equals(((ProcessNode) obj).getUUIDProcessNode());
+    }
 }

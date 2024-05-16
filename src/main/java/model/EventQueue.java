@@ -16,6 +16,10 @@ public class EventQueue {
     // An event queue / thread
     private BlockingQueue<networking.Message> eventsQueue = null;
 
+    public EventQueue(boolean register){
+        eventsQueue = new LinkedBlockingDeque<networking.Message>();
+    }
+
     public EventQueue(){
         eventsQueue = new LinkedBlockingDeque<networking.Message>();
         try {

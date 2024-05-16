@@ -17,7 +17,8 @@ public class ManageEventBEBFactory extends ManageEventAbstractFactory{
 
     }
 
-    public static ManageEventBEBFactory createNewInstance(){
+    // It is accessed by both ProcessEventQueueThread and processHeartBeatQueueThread
+    public synchronized static ManageEventBEBFactory createNewInstance(){
         if(manageEventBEBFactory == null){
             manageEventBEBFactory = new ManageEventBEBFactory();
         }

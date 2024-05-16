@@ -16,4 +16,17 @@ public class MessageUtils {
         return metaInfoMessage;
     }
 
+    public static boolean checkHeartBeatOriginMessages(networking.Message message){
+        // all the heartbeat messages regardless of their type (request| replies) are wrapped into NetworkMessages
+        if(message.getType().equals(Message.Type.NETWORK_MESSAGE)) {
+            networking.Message contentInsideNetwork = message.getNetworkMessage().getMessage();
+            if(contentInsideNetwork.getType().equals(Message.Type.EPFD_INTERNAL_HEARTBEAT_REPLY) ||
+                    contentInsideNetwork.getType().equals(Message.Type.EPFD_INTERNAL_HEARTBEAT_REQUEST)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }

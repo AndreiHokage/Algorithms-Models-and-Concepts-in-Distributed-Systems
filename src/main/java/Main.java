@@ -1,9 +1,11 @@
 import abstractizations.PLAbstraction;
 import model.*;
+import processing.CatalogueAbstractions;
 import processing.ProcessServicesRPC;
 import servers.SystemInputServer;
 import servers.SystemOutputServer;
 import servers.threadsServer.ProcessEventQueueThread;
+import servers.threadsServer.ProcessHeartBeatQueueThread;
 import servers.threadsServer.SystemInputServerThread;
 
 public class Main {
@@ -29,8 +31,11 @@ public class Main {
         // Initialize the event queue that stores all the events for a specific process / per process
         EventQueue eventQueue = new EventQueue();
 
+        // Initialize the event queue that stores all the heartbeats requests and replies for ensuring the liveness of the system in real time
+        HeartBeatQueue heartBeatQueue = new HeartBeatQueue();
+
         // Creates the input server that listens for incoming messages and stores them in queue
-        SystemInputServer systemInputServer = new SystemInputServer(MyselfNode.createNewInstance().getPort(), eventQueue);
+        SystemInputServer systemInputServer = new SystemInputServer(MyselfNode.createNewInstance().getPort(), eventQueue, heartBeatQueue);
 
         // Creates the output server that send message to the HUB
         SystemOutputServer systemOutputServer = new SystemOutputServer(hub);
@@ -39,19 +44,25 @@ public class Main {
         DistributedSystem.createNewInstance().setSystemInputServer(systemInputServer);
         DistributedSystem.createNewInstance().setSystemOutputServer(systemOutputServer);
         DistributedSystem.createNewInstance().setEventQueue(eventQueue);
+        DistributedSystem.createNewInstance().setHeartBeatQueue(heartBeatQueue);
 
         Thread systemInputServerThread = new SystemInputServerThread(systemInputServer);
         systemInputServerThread.setName("Thread-systemInputServer");
         Thread processEventQueueThread = new ProcessEventQueueThread(eventQueue);
         processEventQueueThread.setName("Thread-processEventQueue");
+        Thread processHeartBeatQueueThread = new ProcessHeartBeatQueueThread(heartBeatQueue); // will extract rhe message from heartBeatQueue
+        processHeartBeatQueueThread.setName("Thread-processHeartBeatQueue");
 
-        Thread[] threads = new Thread[2];
+        Thread[] threads = new Thread[3];
         threads[0] = systemInputServerThread;
         threads[1] = processEventQueueThread;
+        threads[2] = processHeartBeatQueueThread;
 
         for(Thread thread: threads){
             thread.start();
         }
+
+        CatalogueAbstractions.getEpfdAbstraction(); // start the epfd from here
 
         // ProcessNode processNode = new ProcessNode(host, port, owner, index);
         // ProcessServicesRPC processServicesRPC = new ProcessServicesRPC(processNode, hub);

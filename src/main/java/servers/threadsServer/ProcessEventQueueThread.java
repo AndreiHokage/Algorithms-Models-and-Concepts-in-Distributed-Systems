@@ -18,6 +18,10 @@ public class ProcessEventQueueThread extends Thread{
         this.eventQueue = eventQueue;
     }
 
+    public EventQueue getEventQueue() {
+        return eventQueue;
+    }
+
     private ManageEventAbstractFactory createManageEventAbstractFactory(String abstractionAlgorithm){
         if(abstractionAlgorithm.equals(IntfConstants.PL_ABS)){
             return ManageEventPLFactory.createNewInstance();
@@ -35,7 +39,31 @@ public class ProcessEventQueueThread extends Thread{
             return ManageEventAPPFactory.createNewInstance();
         }
 
+        if(abstractionAlgorithm.equals(IntfConstants.EPFD_ABS)){
+            return ManageEventEPFDFactory.createNewInstance();
+        }
+
+        if(abstractionAlgorithm.equals(IntfConstants.ELD_ABS)){
+            return ManageEventELDFactory.createNewInstance();
+        }
+
+        if(abstractionAlgorithm.equals(IntfConstants.EC_ABS)){
+            return ManageEventECFactory.createNewInstance();
+        }
+
+        if(abstractionAlgorithm.equals(IntfConstants.EP_ABS)){
+            return ManageEventEPFactory.createNewInstance();
+        }
+
+        if(abstractionAlgorithm.equals(IntfConstants.UC_ABS)){
+            return ManageEventUCFactory.createNewInstance();
+        }
+
         return null;
+    }
+
+    protected void addMessageToTheQueue(networking.Message message) throws InterruptedException {
+        eventQueue.getEventsQueue().put(message);
     }
 
     private void consume(networking.Message message) throws InterruptedException {
@@ -51,7 +79,7 @@ public class ProcessEventQueueThread extends Thread{
         List<networking.Message> messageList = manageEventAbstractFactory.handleEvent(message);
 
         for(networking.Message outcome: messageList) {
-            eventQueue.getEventsQueue().put(outcome);
+            addMessageToTheQueue(outcome);
         }
     }
 
