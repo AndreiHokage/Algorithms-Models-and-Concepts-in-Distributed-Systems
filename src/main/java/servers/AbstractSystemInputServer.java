@@ -23,9 +23,9 @@ public abstract class AbstractSystemInputServer {
         try{
             server = new ServerSocket(port);
             while (true){
-                logger.trace("Waiting for clients ...");
+                //logger.trace("Waiting for clients ...");
                 Socket client = server.accept();
-                logger.info("Client connected ...");
+                //logger.info("Client connected ...");
                 processRequest(client);
             }
         } catch (IOException e) {

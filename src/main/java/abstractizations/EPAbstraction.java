@@ -26,7 +26,7 @@ public class EPAbstraction implements Abstraction{
 
     private Integer accepted = 0;
 
-    private Integer N = IntfConstants.NUM_PROC;
+    private Integer N = DistributedSystem.createNewInstance().getNumberProcessesSystem();//IntfConstants.NUM_PROC;
 
     private Boolean halt = false;
 
@@ -54,7 +54,7 @@ public class EPAbstraction implements Abstraction{
         if(accepted > Math.ceil(N /(double) 2)){
             accepted = 0;
             String generatedUUID = UUID.randomUUID().toString();
-            String currentAbstraction = IntfConstants.EP_ABS;
+            String currentAbstraction = IntfConstants.EP_ABS + "[" + indexEPepoch + "]";
             MetaInfoMessage metaInfoMessageEpInternalDecided = new MetaInfoMessage(Message.Type.EP_INTERNAL_DECIDED, generatedUUID,
                     null, currentAbstraction, DistributedSystem.createNewInstance().getSystemId());
             networking.Message epInternalDecidedMessage = ProtoSerialiseUtils.createEpInternalDecided(tmpVal, metaInfoMessageEpInternalDecided);
@@ -86,7 +86,7 @@ public class EPAbstraction implements Abstraction{
             statesList = new ArrayList<>();
 
             String generatedUUID = UUID.randomUUID().toString();
-            String currentAbstraction = IntfConstants.EP_ABS;
+            String currentAbstraction = IntfConstants.EP_ABS + "[" + indexEPepoch + "]";
             MetaInfoMessage metaInfoMessageEpInternalWrite = new MetaInfoMessage(Message.Type.EP_INTERNAL_WRITE, generatedUUID,
                     null, currentAbstraction, DistributedSystem.createNewInstance().getSystemId());
             networking.Message epInternalWriteMessage = ProtoSerialiseUtils.createEpInternalWrite(tmpVal, metaInfoMessageEpInternalWrite);
@@ -173,7 +173,7 @@ public class EPAbstraction implements Abstraction{
             Integer valueDecided = epInternalDecided.getValue().getV();
 
             String generatedUUID = UUID.randomUUID().toString();
-            String fromAbstractionId = IntfConstants.EC_ABS; // send ABOVE!!!
+            String fromAbstractionId = IntfConstants.UC_ABS + "[" + AppAbstraction.currentTopicConsensus + "]"; // send ABOVE!!!
             MetaInfoMessage metaInfoMessageFinalEPDiceded = new MetaInfoMessage(Message.Type.EP_DECIDE, generatedUUID,
                     fromAbstractionId, null, DistributedSystem.createNewInstance().getSystemId());
             networking.Message epDecideMessage = ProtoSerialiseUtils.createEpDecide(indexEPepoch, valueDecided, metaInfoMessageFinalEPDiceded);

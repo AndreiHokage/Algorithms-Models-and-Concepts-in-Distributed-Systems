@@ -1,5 +1,6 @@
 import abstractizations.PLAbstraction;
 import model.*;
+import org.apache.log4j.Logger;
 import processing.CatalogueAbstractions;
 import processing.ProcessServicesRPC;
 import servers.SystemInputServer;
@@ -9,6 +10,8 @@ import servers.threadsServer.ProcessHeartBeatQueueThread;
 import servers.threadsServer.SystemInputServerThread;
 
 public class Main {
+
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args){
         String hub_host = args[0];
@@ -61,8 +64,6 @@ public class Main {
         for(Thread thread: threads){
             thread.start();
         }
-
-        CatalogueAbstractions.getEpfdAbstraction(); // start the epfd from here
 
         // ProcessNode processNode = new ProcessNode(host, port, owner, index);
         // ProcessServicesRPC processServicesRPC = new ProcessServicesRPC(processNode, hub);

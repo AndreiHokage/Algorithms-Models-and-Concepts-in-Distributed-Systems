@@ -105,9 +105,9 @@ public class CatalogueAbstractions {
                     ": Create new EP Epoch abstraction for the leader node " + epIndexEPEpoch); // can be created by both leader and nod-leader node
             EPAbstraction epAbstraction = new EPAbstraction(epState, epIndexEPEpoch);
             epAbstractions.put(epIndexEPEpoch, epAbstraction);
-        } else {
+        } /*else {
             assert false; // shouldn t exist
-        }
+        }*/
         return epAbstractions.get(epIndexEPEpoch);
     }
 

@@ -24,6 +24,8 @@ public class AppAbstraction implements Abstraction{
 
     private static AppAbstraction appAbstraction = null;
 
+    public static String currentTopicConsensus = null;
+
     private AppAbstraction(){
 
     }
@@ -131,6 +133,9 @@ public class AppAbstraction implements Abstraction{
             String topicConsensus = appProposeMessage.getTopic();
             Integer proposedValue = appProposeMessage.getValue().getV();
 
+            // set the currentTopicConsensus that the node is dealing with. Only one topicConsensus per time
+            AppAbstraction.currentTopicConsensus = topicConsensus;
+
             // create a uniform consensus instance if it didn't exist yet
             CatalogueAbstractions.getUcAbstraction(topicConsensus);
 
@@ -226,7 +231,9 @@ public class AppAbstraction implements Abstraction{
         networking.Message plSendMessage = ProtoSerialiseUtils.createPLSendMessage(appDecideMessage, metaInfoMessagePLSend,
                 DistributedSystem.createNewInstance().getHub());
 
-        // BALANICI ?? - shutdown the epfd
+        // We cannot shutdown the epfd because we don't know if the consensus algorithm has finished. A premature stopping
+        // will cause as `this` node to no longer be able to get updates regarding epoch changes when leaders have changes.
+        AppAbstraction.currentTopicConsensus = null; //??~~~
 
         return plSendMessage;
     }
@@ -244,6 +251,11 @@ public class AppAbstraction implements Abstraction{
 
         ProcessNode processNodeHub = DistributedSystem.createNewInstance().getHub();
         networking.Message plSendProcRegistrationMessage = ProtoSerialiseUtils.createPLSendMessage(procRegistrationMessage, metaInfoMessagePL, processNodeHub);
+
+        // set back to null,
+        // cannot close the epfd on the current consensus topic. If I am the leader, I will cause big damages and if I am non-leader I will close for
+        // myself the opportunity to be an upcoming leader
+//        AppAbstraction.currentTopicConsensus = null; BALANICI ??
 
         return plSendProcRegistrationMessage;
     }

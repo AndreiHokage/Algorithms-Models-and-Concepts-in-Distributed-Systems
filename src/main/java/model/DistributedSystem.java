@@ -105,6 +105,9 @@ public class DistributedSystem {
         logger.info("----------------------END  list of processes for initialising system----------------------------");
         this.processes = processes;
 
+        // initialise here the epfd in order to know that the input server, event server, and hearthbeat server had succeeded to init
+        // once epfd is launched is gonna send messages immediately and is important to as these servers to be up and running
+        // moreover, we know that the list of all processes have been set it up
         logger.info("----------------------Initialize the EPFD abstraction for this process in the system----------------------------");
         CatalogueAbstractions.getEpfdAbstraction();
     }

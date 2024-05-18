@@ -26,6 +26,14 @@ public class MessageUtils {
             }
         }
 
+        if(message.getType().equals(Message.Type.PL_SEND)) {
+            networking.Message contentInsidePLSend = message.getPlSend().getMessage();
+            if(contentInsidePLSend.getType().equals(Message.Type.EPFD_INTERNAL_HEARTBEAT_REPLY) ||
+                    contentInsidePLSend.getType().equals(Message.Type.EPFD_INTERNAL_HEARTBEAT_REQUEST)){
+                return true;
+            }
+        }
+
         return false;
     }
 

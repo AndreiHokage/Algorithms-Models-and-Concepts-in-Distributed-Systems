@@ -6,6 +6,7 @@ import model.ProcessNode;
 import networking.Message;
 import networking.PlSend;
 import org.apache.log4j.Logger;
+import processing.CatalogueAbstractions;
 import processing.ProtoDeserialiseUtils;
 import processing.ProtoSerialiseUtils;
 import utils.IntfConstants;
@@ -59,6 +60,11 @@ public class EPFDAbstraction implements Abstraction{
     }
 
     public networking.Message handlingPLDeliver(networking.PlDeliver message, MetaInfoMessage metaInfoMessage){ // we receive from ourselves as well
+        if(AppAbstraction.currentTopicConsensus == null){
+            logger.info("No current topic abstraction that to be treated by epfd");
+            return null;
+        }
+
         networking.Message contentMessage = message.getMessage();
         Message.Type type = contentMessage.getType();
 
@@ -128,6 +134,13 @@ public class EPFDAbstraction implements Abstraction{
 
         @Override
         public List<Message> call() throws Exception {
+            if(AppAbstraction.currentTopicConsensus == null){
+                logger.info("No current topic abstraction that to be treated by epfd");
+                // schedule the next timeout
+                scheduleTheNextTimeout();
+                return null;
+            }
+
             aliveListLocked.lock();
             List<networking.Message> livenessMessagesList = new ArrayList<>();
 
@@ -161,7 +174,12 @@ public class EPFDAbstraction implements Abstraction{
                 }
 
                 String generatedUUID = UUID.randomUUID().toString();
-                String toAbstractionIdHeartbeatRequest = IntfConstants.EPFD_ABS; // indicate the abstraction that will handel the encapsulated message or from where comes form
+                //"app.uc[x].ec[0].eld" + "." + IntfConstants.EPFD_ABS;
+                String toAbstractionIdHeartbeatRequest = IntfConstants.APP_ABS + "." +
+                        IntfConstants.UC_ABS + "[" + AppAbstraction.currentTopicConsensus + "]" + "." +
+                        IntfConstants.EC_ABS + "[" + CatalogueAbstractions.getUcAbstraction(AppAbstraction.currentTopicConsensus).getEts() + "]" + "." +
+                        IntfConstants.ELD_ABS + "." +
+                        IntfConstants.EPFD_ABS; // indicate the abstraction that will handel the encapsulated message or from where comes form
                 MetaInfoMessage metaInfoMessageHeartBeatRequest = new MetaInfoMessage(Message.Type.EPFD_INTERNAL_HEARTBEAT_REQUEST, generatedUUID,
                         null, toAbstractionIdHeartbeatRequest, DistributedSystem.createNewInstance().getSystemId());
                 networking.Message heartbeatRequestMessage = ProtoSerialiseUtils.createEpfdInternalHeartbeatRequestMessage(metaInfoMessageHeartBeatRequest);

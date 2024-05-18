@@ -49,7 +49,7 @@ public class PLAbstraction implements Abstraction {
         String fromAbstractionId = metaInfoMessage.getToAbstractionId();
         String alteredFromAbstractionId = AbstractionUtils.removeCurrentAbstraction(fromAbstractionId); // remove the last token: "pl" from `fromAbstractionID`
 
-        logger.trace("Deliver the message: " + m + " with the metadata: " + metaInfoMessage + " sent by " + p + " to the abstraction " + alteredFromAbstractionId);
+        //logger.trace("Deliver the message: " + m + " with the metadata: " + metaInfoMessage + " sent by " + p + " to the abstraction " + alteredFromAbstractionId);
 
         MetaInfoMessage metaInfoMessagePLDeliver = new MetaInfoMessage(Message.Type.PL_DELIVER, metaInfoMessage.getMessageUuid(),
                 alteredFromAbstractionId, null, DistributedSystem.createNewInstance().getSystemId());

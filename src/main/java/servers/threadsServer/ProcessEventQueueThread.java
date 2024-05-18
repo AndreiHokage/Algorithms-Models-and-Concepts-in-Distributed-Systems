@@ -51,11 +51,11 @@ public class ProcessEventQueueThread extends Thread{
             return ManageEventECFactory.createNewInstance();
         }
 
-        if(abstractionAlgorithm.equals(IntfConstants.EP_ABS)){
+        if(abstractionAlgorithm.startsWith(IntfConstants.EP_ABS)){
             return ManageEventEPFactory.createNewInstance();
         }
 
-        if(abstractionAlgorithm.equals(IntfConstants.UC_ABS)){
+        if(abstractionAlgorithm.startsWith(IntfConstants.UC_ABS)){
             return ManageEventUCFactory.createNewInstance();
         }
 
@@ -76,6 +76,9 @@ public class ProcessEventQueueThread extends Thread{
         // determine the abstraction factory based on abstractionAlgorithm attribute. Return just the abstraction that will handle the message
         ManageEventAbstractFactory manageEventAbstractFactory = createManageEventAbstractFactory(abstractionAlgorithm);
         // handle the event based on the type of the message. Provide the logic within the abstraction for dealing with that the of message
+        if(manageEventAbstractFactory == null){
+            logger.info("NULLABLE on message: " + message);
+        }
         List<networking.Message> messageList = manageEventAbstractFactory.handleEvent(message);
 
         for(networking.Message outcome: messageList) {

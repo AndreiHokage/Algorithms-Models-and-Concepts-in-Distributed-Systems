@@ -221,7 +221,7 @@ public class NnarAbstraction implements Abstraction{
             Integer v_p = nnarInternalValueMessage.getValue().getV();
 
             this.sessions.get(r).getReadList().add(new NnarDefinedValue(ts_p, wr_p, v_p));
-            if(this.sessions.get(r).getReadList().size() > Math.ceil(IntfConstants.NUM_PROC /(double) 2)){ // IN FAVOUR
+            if(this.sessions.get(r).getReadList().size() > Math.ceil(DistributedSystem.createNewInstance().getNumberProcessesSystem() /(double) 2)){ // IN FAVOUR
                 NnarDefinedValue biggest = this.getSession().get(r).getBiggestValueFromAllReadings(); // `such that` is applied
                 this.getSession().get(r).clearReadList(); // clear the readList of the queried session
                 this.getSession().get(r).setReadVal(biggest.getVal());
@@ -265,7 +265,7 @@ public class NnarAbstraction implements Abstraction{
             Integer r = nnarInternalAck.getReadId();
             this.sessions.get(r).setAcks(this.sessions.get(r).getAcks() + 1);
 
-            if(this.sessions.get(r).getAcks() > Math.ceil(IntfConstants.NUM_PROC /(double) 2)){ // IN FAVOUR
+            if(this.sessions.get(r).getAcks() > Math.ceil(DistributedSystem.createNewInstance().getNumberProcessesSystem() /(double) 2)){ // IN FAVOUR
                 this.sessions.get(r).setAcks(0); // any later on message will stop here !!!!!!!!
                 if(this.getSession().get(r).getReading().equals(Boolean.TRUE)){
                     this.getSession().get(r).setReading(Boolean.FALSE);

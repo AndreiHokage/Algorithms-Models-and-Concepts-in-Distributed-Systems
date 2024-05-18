@@ -56,9 +56,9 @@ public class ELDAbstraction implements Abstraction{
         }
 
         // it is possible as localLeader to have a lower rank. All we want to know is if the maxRank occurs again or not
-        if(leader == null || !localLeader.getRank().equals(leader.getRank())){
+        if(leader == null || !localLeader.getRank().equals(leader.getRank())){ // a new leader is chosen
             String generatedUUID = UUID.randomUUID().toString();
-            String fromAbstractionId = IntfConstants.EC_ABS; // we go up now; it creates a message for itself and send tit to above abstraction levels
+            String fromAbstractionId = IntfConstants.EC_ABS; // we go up now; it creates a message for itself and send it to above abstraction levels
             MetaInfoMessage metaInfoMessageEldTrust = new MetaInfoMessage(Message.Type.ELD_TRUST, generatedUUID,
                     fromAbstractionId, null, DistributedSystem.createNewInstance().getSystemId());
             networking.Message eldTrustMessage = ProtoSerialiseUtils.createEldTrustMessage(metaInfoMessageEldTrust, localLeader);

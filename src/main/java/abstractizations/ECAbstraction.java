@@ -24,7 +24,7 @@ public class ECAbstraction implements Abstraction{
         this.trusted = getMaxRankProcessNode();
         this.lastts = 0;
         this.ts = MyselfNode.createNewInstance().getRank();
-        this.N = IntfConstants.NUM_PROC;
+        this.N = DistributedSystem.createNewInstance().getNumberProcessesSystem();
     }
 
     private ProcessNode getMaxRankProcessNode(){
@@ -72,10 +72,14 @@ public class ECAbstraction implements Abstraction{
         ProcessNode imposingLeader = ProtoDeserialiseUtils.convertProcessIdToProcessNode(bebDeliver.getSender());
         Integer newts = ecInternalNewEpochMessage.getTimestamp();
 
+        if(AppAbstraction.currentTopicConsensus == null){ // we don't have any consensus topic for moment
+            return null;
+        }
+
         if(trusted.equals(imposingLeader) && newts > lastts){
             lastts = newts;
 
-            String fromAbstractionId = IntfConstants.UC_ABS; // CREATE ONE HERE (INTERMEDIATE). DON'T CARE ABOUT LOWER LEVELS
+            String fromAbstractionId = IntfConstants.UC_ABS + "[" + AppAbstraction.currentTopicConsensus + "]"; // CREATE ONE HERE (INTERMEDIATE). DON'T CARE ABOUT LOWER LEVELS. Which consensusTopic?
             MetaInfoMessage metaInfoMessageStartEpoch = new MetaInfoMessage(Message.Type.EC_START_EPOCH, metaInfoMessage.getMessageUuid(),
                     fromAbstractionId, null, DistributedSystem.createNewInstance().getSystemId()); // go up; put the abstraction that will handle this
             networking.Message ecStartEpochMessage = ProtoSerialiseUtils.createEcStartEpochMessage(newts, imposingLeader, metaInfoMessageStartEpoch);

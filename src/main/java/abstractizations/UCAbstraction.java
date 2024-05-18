@@ -46,6 +46,14 @@ public class UCAbstraction implements Abstraction {
         this.newl = null;
     }
 
+    public Integer getEts() {
+        return ets;
+    }
+
+    public void setEts(Integer ets) {
+        this.ets = ets;
+    }
+
     private ProcessNode getMaxRankProcessNode(){
         ProcessNode maxRankProcess = DistributedSystem.createNewInstance().getProcesses().get(0);
         for(ProcessNode processNode: DistributedSystem.createNewInstance().getProcesses()){
@@ -62,7 +70,7 @@ public class UCAbstraction implements Abstraction {
             proposed = true;
 
             String generatedUUID = UUID.randomUUID().toString();
-            String toAbstractionId = IntfConstants.EC_ABS + "." + IntfConstants.EP_ABS;
+            String toAbstractionId = IntfConstants.EC_ABS + "." + IntfConstants.EP_ABS + "[" + ets + "]";
             MetaInfoMessage metaInfoMessageEPPropose = new MetaInfoMessage(Message.Type.EP_PROPOSE, generatedUUID,
                     null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
             networking.Message epProposeMessage = ProtoSerialiseUtils.createEPPropose(val, metaInfoMessageEPPropose);
@@ -90,7 +98,7 @@ public class UCAbstraction implements Abstraction {
         newl = fwLeader;
 
         String generatedUUID = UUID.randomUUID().toString();
-        String toAbstractionId = IntfConstants.EC_ABS + "." + IntfConstants.EP_ABS;
+        String toAbstractionId = IntfConstants.EC_ABS + "." + IntfConstants.EP_ABS + "[" + ets + "]"; // We send the message to the current EP epoch that is running
         MetaInfoMessage metaInfoMessageEPAbort = new MetaInfoMessage(Message.Type.EP_ABORT, generatedUUID,
                 null, toAbstractionId, DistributedSystem.createNewInstance().getSystemId());
         networking.Message epAbortMessage = ProtoSerialiseUtils.createEpAbort(metaInfoMessageEPAbort);
